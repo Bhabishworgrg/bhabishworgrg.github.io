@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Bhabishwor</title>
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+
+	<!-- navbar -->
+	<nav class="navbar">
+		<a class="navbar-title" href="#">
+			<p class="first-name">Bhabishwor</p>
+			<p class="last-name">Gurung</p>
+		</a>
+		
+		<div class= "navbar-menu">
+			<a class="navbar-menu-item" href="#intro">Home</a>
+			<a class="navbar-menu-item" href="#about">About</a>
+			<a class="navbar-menu-item" href="#projects">Projects</a>
+			<a class="navbar-menu-item" href="#experience">Experience</a>
+		</div>
+
+		<div class="navbar-contact">
+			<a class="navbar-contact-item" href="" onclick="openMail(event)">
+				<img src="https://img.icons8.com/ios/50/000000/email.png" alt="email">
+			</a>
+			<a class="navbar-contact-item" href="https://www.github.com/Bhabishworgrg" target="_blank">
+				<img src="https://img.icons8.com/ios/50/000000/github.png" alt="github">
+			</a>
+			<a class="navbar-contact-item" href="https://www.linkedin.com/in/bhabishwor-gurung/" target="_blank">
+				<img src="https://img.icons8.com/ios/50/000000/linkedin.png" alt="linkedin">
+			</a>
+		</div>
+	</nav>
+
+	<div class="content">
+		<!-- intro -->
+		<div class="intro">
+			<p class="inro-prompt">$ whoami</p>
+			<p class="intro-title">Bhabishwor Gurung</p>
+			<span class="intro-subtitle">Building things, one commit at a time.</span>
+			<span class="cursor">|</span>
+		</div>
+
+		<!-- about -->
+		<div class="about">
+			<h1>About Me</h1>
+
+			<div class="about-content">
+				I’m currently pursuing a BSc (H) in Computing degree at The British College, Kathmandu. As an aspiring front-end developer and software enthusiast, I’m passionate about creating intuitive user experiences. I also enjoy developing games as a hobby. Beyond my technical interests, I’ve gained professional experience as a Data Analyst and a Bench Sales Recruiter.
+			</div>
+		</div>
+
+		<!-- projects -->
+		<div class="projects">
+			<h1>Projects</h1>
+
+			<div class="projects-grid">
+				<div class="project-card">
+					<img src="https://via.placeholder.com/150" alt="project-1">
+					<h2 class="project-title">Project 1</h2>
+					<p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.</p>
+				</div>
+				<div class="project-card">
+					<img src="https://via.placeholder.com/150" alt="project-2">
+					<h2 class="project-title">Project 2</h2>
+					<p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.</p>
+				</div>
+				<div class="project-card">
+					<img src="https://via.placeholder.com/150" alt="project-3">
+					<h2 class="project-title">Project 3</h2>
+					<p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.</p>
+				</div>
+				<div class="project-card">
+					<img src="https://via.placeholder.com/150" alt="project-4">
+					<h2 class="project-title">Project 4</h2>
+					<p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.</p>
+				</div>
+				<div class="project-card">
+					<img src="https://via.placeholder.com/150" alt="project-5">
+					<h2 class="project-title">Project 5</h2>
+					<p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- experience -->
+		<div class="experience">
+			<h1>Experience</h1>
+			
+			<div class="experience-tabs">
+				<div class="experience-tab">
+					<button class="experience-tablinks" onclick="openTab(event, 'tab-1')">Data Analyst</button>
+					<button class="experience-tablinks" onclick="openTab(event, 'tab-2')">Bench Sales Recruiter</button>
+					<button class="experience-tablinks" onclick="openTab(event, 'tab-3')">Intern</button>
+				</div>
+
+				<div id="experience-tab1" class="tabcontent">
+					<h2>Data Analyst</h2>
+					<p>As a Data Analyst, I was responsible for analyzing data and providing insights to the management team. I also developed reports and dashboards to help the team make data-driven decisions.</p>
+					<div id="experience-tab2" class="tabcontent">
+						<h2>Data Analyst</h2>
+						<p>As a Data Analyst, I was responsible for analyzing data and providing insights to the management team. I also developed reports and dashboards to help the team make data-driven decisions.</p>
+					</div>
+					<div id="experience-tab3" class="tabcontent">
+						<h2>Bench Sales Recruiter</h2>
+						<p>As a Bench Sales Recruiter, I was responsible for finding suitable candidates for open positions. I also maintained relationships with consultants and clients to ensure a smooth recruitment process.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function openMail(event) {
+			event.preventDefault();
+			window.open('mailto:bhabishworgrg@gmail.com');
+		}
+	</script>
+</body>
+
+</html>
+
