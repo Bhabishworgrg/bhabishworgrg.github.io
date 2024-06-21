@@ -1,7 +1,9 @@
+import Intro from './components/Intro.jsx'
+
 function App() {
 	return (
 		<>
-			Hello World
+			<Intro/>
 		</>
 	)
 }
