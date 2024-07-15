@@ -4,16 +4,24 @@ import About from './components/About.jsx'
 import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Experience from './components/Experience.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
 	return (
 		<div className='App'>
 			<Navbar/>
-			<Intro/>
-			<About/>
-			<Skills/>
-			<Projects/>
-			<Experience/>
+		
+			<div className='content'>
+				<Intro/>
+				<About/>
+				<Skills/>
+				<Projects/>
+				<Experience/>
+			</div>
+
+			<div className='footer'>
+				<Footer/>
+			</div>
 		</div>
 	)
 }
