@@ -6,6 +6,8 @@ import Projects from './components/Projects.jsx'
 import Experience from './components/Experience.jsx'
 import Footer from './components/Footer.jsx'
 
+import './App.css'
+
 function App() {
 	return (
 		<div className='App'>
