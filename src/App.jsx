@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
 	return (
-		<div className='App'>
+		<div className='bg-bgColor text-priColor'>
 			<Navbar/>
 		
 			<div className='content'>
