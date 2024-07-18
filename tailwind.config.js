@@ -7,9 +7,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				bgColor: '#1E1E2E', // Background color
-				priColor: '#EAEAEA', // Text color
-				secColor: '#7F5AF0', // Secondary color (hover effects)
+				primary: '#1E1E2E', // Background color
+				secondary: '#7F5AF0', // Secondary color (hover effects)
+				tertiary: '#EAEAEA', // Text color
+				highlight: '#7F5AF0', // Secondary color (hover effects)
 			},
 		},
 	},
