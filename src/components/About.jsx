@@ -1,7 +1,7 @@
 function About() {
 	return (
 		<>
-			<h1>About Me</h1>
+			<h1 id='about'>About Me</h1>
 			
 			<div className='about-content'>
 				<div className='about-description'>

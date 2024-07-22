@@ -10,7 +10,7 @@ function Skills() {
 
 	return (
 		<>
-			<h1>Skills</h1>
+			<h1 id='skills'>Skills</h1>
 
 			<div>
 				{ addSkill('HTML CSS') }

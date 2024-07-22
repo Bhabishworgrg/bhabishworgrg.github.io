@@ -47,7 +47,7 @@ function Projects() {
 
 	return (
 		<>
-			<h1>Projects</h1>
+			<h1 id='projects'>Projects</h1>
 
 			<ul className='projects-grid'>
 				{ addProject('Project 1') }
