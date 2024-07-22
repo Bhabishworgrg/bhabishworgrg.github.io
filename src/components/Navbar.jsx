@@ -1,15 +1,20 @@
 import { useState } from 'react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 function Navbar() {
-	const [activeLink, setActiveLink] = useState('#intro');
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [activeLink, setActiveLink] = useState('#intro');
 
-	function setLinkColor(link) {
-		return (link === activeLink ? 'text-highlight' : 'text-tertiary') + ' hover:text-highlight';
+	function toggleMenuButton() {
+		return menuOpen ? <XMarkIcon className='h-6 w-6' /> : <Bars3Icon className='h-6 w-6' />
 	}
 
 	function toggleLinksVisibility() {
 		return menuOpen ? 'flex' : 'hidden';
+	}
+
+	function setLinkColor(link) {
+		return (link === activeLink ? 'text-highlight' : 'text-tertiary') + ' hover:text-highlight';
 	}
 
 	return (
@@ -24,7 +29,7 @@ function Navbar() {
 					onClick={ () => setMenuOpen(!menuOpen) }
 					className='sm:hidden text-tertiary hover:text-highlight focus:outline-none'
 					>
-						{ menuOpen ? 'Close' : 'Menu' }
+						{ toggleMenuButton() }
 					</button>
 
 					{ /* Navigation Links */ }
