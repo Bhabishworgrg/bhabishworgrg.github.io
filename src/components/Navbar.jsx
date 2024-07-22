@@ -13,6 +13,13 @@ function Navbar() {
 		return menuOpen ? 'flex' : 'hidden';
 	}
 
+	function scrollToSection(event, id) {
+		event.preventDefault();
+		document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+		setActiveLink(id);
+		setMenuOpen(false);
+	}
+
 	function setLinkColor(link) {
 		return (link === activeLink ? 'text-highlight' : 'text-tertiary') + ' hover:text-highlight';
 	}
@@ -46,7 +53,7 @@ function Navbar() {
 						].map((item) => (
 							<a
 							href={ item.href }
-							onClick={ () => setActiveLink(item.href) }
+							onClick={ (event) => scrollToSection(event, item.href) }
 							className={ setLinkColor(item.href) }
 							>
 								{ item.name }
