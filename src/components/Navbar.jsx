@@ -2,20 +2,36 @@ import { useState } from 'react';
 
 function Navbar() {
 	const [activeLink, setActiveLink] = useState('#intro');
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	function setLinkColor(link) {
 		return (link === activeLink ? 'text-highlight' : 'text-tertiary') + ' hover:text-highlight';
+	}
+
+	function toggleLinksVisibility() {
+		return menuOpen ? 'flex' : 'hidden';
 	}
 
 	return (
 		<nav className='bg-secondary'>
 			<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
 				<div className='flex h-16 items-center justify-between'>
-					{/* Name */}
+					{ /* Name */ }
 					<div className='text-tertiary text-lg font-bold'>Bhabishwor</div>
+					
+					{ /* Mobile Menu Button */ }
+					<button
+					onClick={ () => setMenuOpen(!menuOpen) }
+					className='sm:hidden text-tertiary hover:text-highlight focus:outline-none'
+					>
+						{ menuOpen ? 'Close' : 'Menu' }
+					</button>
 
-					{/* Navigation Links */}
-					<div className='flex space-x-4'>
+					{ /* Navigation Links */ }
+					<div className={
+						toggleLinksVisibility() +
+						' flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 sm:flex' 
+					}>
 						{[
 							{ name: 'Home', href: '#intro' },
 							{ name: 'About', href: '#about' },
@@ -23,7 +39,11 @@ function Navbar() {
 							{ name: 'Projects', href: '#projects' },
 							{ name: 'Experience', href: '#experience' },
 						].map((item) => (
-							<a href={ item.href } onClick={ () => setActiveLink(item.href) } className={ setLinkColor(item.href) }>
+							<a
+							href={ item.href }
+							onClick={ () => setActiveLink(item.href) }
+							className={ setLinkColor(item.href) }
+							>
 								{ item.name }
 							</a>
 						))}
