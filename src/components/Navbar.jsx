@@ -3,7 +3,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);
-	const [activeLink, setActiveLink] = useState('#intro');
 
 	function toggleMenuButton() {
 		return menuOpen ? <XMarkIcon className='h-6 w-6' /> : <Bars3Icon className='h-6 w-6' />
@@ -16,33 +15,25 @@ function Navbar() {
 	function scrollToSection(event, id) {
 		event.preventDefault();
 		document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-		setActiveLink(id);
 		setMenuOpen(false);
 	}
 
-	function setLinkColor(link) {
-		return (link === activeLink ? 'text-highlight' : 'text-tertiary') + ' hover:text-highlight';
-	}
-
 	return (
-		<nav className='bg-secondary'>
+		<nav className='bg-secondary sticky top-0 z-50'>
 			<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
 				<div className='flex h-16 items-center justify-between'>
 					{ /* Name */ }
-					<div className='text-tertiary text-lg font-bold'>Bhabishwor</div>
-					
-					{ /* Mobile Menu Button */ }
-					<button
-					onClick={ () => setMenuOpen(!menuOpen) }
-					className='sm:hidden text-tertiary hover:text-highlight focus:outline-none'
+					<a
+					href='#'
+					className='text-tertiary text-lg font-bold'
 					>
-						{ toggleMenuButton() }
-					</button>
-
+						Bhabishwor
+					</a>
+					
 					{ /* Navigation Links */ }
 					<div className={
 						toggleLinksVisibility() +
-						' flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 sm:flex' 
+    					' flex-col items-center text-center sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 sm:justify-start sm:flex'
 					}>
 						{[
 							{ name: 'Home', href: '#intro' },
@@ -54,12 +45,20 @@ function Navbar() {
 							<a
 							href={ item.href }
 							onClick={ (event) => scrollToSection(event, item.href) }
-							className={ setLinkColor(item.href) }
+							className='text-tertiary hover:text-highlight'
 							>
 								{ item.name }
 							</a>
 						))}
 					</div>
+					
+					{ /* Mobile Menu Button */ }
+					<button
+					onClick={ () => setMenuOpen(!menuOpen) }
+					className='sm:hidden text-tertiary hover:text-highlight focus:outline-none'
+					>
+						{ toggleMenuButton() }
+					</button>
 				</div>
 			</div>
 		</nav>
@@ -67,46 +66,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-//function Navbar() {
-	//	return(
-		//		<nav className='navbar'>
-		//			<a className='navbar-title' href='#'>
-		//				<p className='first-name'>Bhabishwor</p>
-		//				<p className='last-name'>Gurung</p>
-		//			</a>
-		//			
-		//			<div className='navbar-menu'>
-		//				<a className='navbar-menu-item' href='#intro'>
-		//					Home
-		//				</a>
-		//				<a className='navbar-menu-item' href='#about'>
-		//					About
-		//				</a>
-		//				<a className='navbar-menu-item' href='#skills'>
-		//					Skills
-		//				</a>
-		//				<a className='navbar-menu-item' href='#projects'>
-		//					Projects
-		//				</a>
-		//				<a className='navbar-menu-item' href='#experience'>
-		//					Experience
-		//				</a>
-		//			</div>
-		//		
-		//			<div className='navbar-contact'>
-		//				<a className='navbar-contact-item' href='mailto:bhabishworgrg@gmail.com' target='_blank' rel='noreferrer'>
-		//					<img src='https://img.icons8.com/ios/50/000000/email.png' alt='email'/>
-		//				</a>
-		//				<a className='navbar-contact-item' href='https://www.github.com/Bhabishworgrg' target='_blank' rel='noreferrer'>
-		//					<img src='https://img.icons8.com/ios/50/000000/github.png' alt='github'/>
-		//				</a>
-		//				<a className='navbar-contact-item' href='https://www.linkedin.com/in/bhabishwor-gurung/' target='_blank' rel='noreferrer'>
-		//					<img src='https://img.icons8.com/ios/50/000000/linkedin.png' alt='linkedin'/>
-		//				</a>
-		//			</div>
-		//		</nav>
-		//	);
-	//}
-//
-//	export default Navbar;
