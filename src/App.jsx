@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
 	return (
-		<div className='bg-primary text-tertiary'>
+		<div className='text-tertiary mx-5 sm:mx-16 md:mx-36 lg:mx-48'>
 			<Navbar/>
 		
 			<div className='content'>

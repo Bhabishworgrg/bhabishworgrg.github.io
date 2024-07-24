@@ -1,17 +1,4 @@
-import { useState } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-
 function Navbar() {
-	const [menuOpen, setMenuOpen] = useState(false);
-
-	function toggleMenuButton() {
-		return menuOpen ? <XMarkIcon className='h-6 w-6' /> : <Bars3Icon className='h-6 w-6' />
-	}
-
-	function toggleLinksVisibility() {
-		return menuOpen ? 'flex' : 'hidden';
-	}
-
 	function scrollToSection(event, id) {
 		event.preventDefault();
 		document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
@@ -19,9 +6,8 @@ function Navbar() {
 	}
 
 	return (
-		<nav className='bg-secondary sticky top-0 z-50'>
-			<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-				<div className='flex h-16 items-center justify-between'>
+		<nav className='bg-secondary sticky top-0 my-7 px-4 '>
+				<div className='flex items-center justify-between'>
 					{ /* Name */ }
 					<a
 					href='#'
@@ -31,10 +17,7 @@ function Navbar() {
 					</a>
 					
 					{ /* Navigation Links */ }
-					<div className={
-						toggleLinksVisibility() +
-    					' flex-col items-center text-center sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 sm:justify-start sm:flex'
-					}>
+					<div className='flex-col sm:flex-row sm:space-x-4 sm:justify-start sm:static sm:w-auto absolute top-full left-0 w-full bg-secondary sm:bg-transparent sm:flex sm:space-y-0'>
 						{[
 							{ name: 'Home', href: '#intro' },
 							{ name: 'About', href: '#about' },
@@ -51,16 +34,24 @@ function Navbar() {
 							</a>
 						))}
 					</div>
-					
-					{ /* Mobile Menu Button */ }
-					<button
-					onClick={ () => setMenuOpen(!menuOpen) }
-					className='sm:hidden text-tertiary hover:text-highlight focus:outline-none'
-					>
-						{ toggleMenuButton() }
-					</button>
+
+					{ /* Social Links */ }
+					<div className='flex items-center space-x-4'>
+						{[
+							{ name: 'GitHub', href: 'https://github.com/Bhabishworgrg', target: '_blank' },
+							{ name: 'LinkedIn', href: 'https://www.linkedin.com/in/bhabishwor-grg', target: '_blank' },
+							{ name: 'Mail', href: 'mailto:bhabishworgrg@gmail.com' },
+						].map((item) => (
+							<a
+							href={ item.href }
+							target={ item.target }
+							className='text-tertiary hover:text-highlight'
+							>
+								{ item.name }	
+							</a>
+						))}
+					</div>
 				</div>
-			</div>
 		</nav>
 	);
 }
