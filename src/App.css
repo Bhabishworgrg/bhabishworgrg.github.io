@@ -1,4 +1,36 @@
 html {
 	scroll-padding-top: 4rem; /* Adjust this based on your navbar height */
-	background-color: #1E1E2E;
+	background-color: #3B1C32;
+}
+
+.ascii-art {
+	font-size: 0.17rem;
+}
+
+@media (min-width: 640px) {
+	.ascii-art {
+		font-size: 0.25rem;
+	}
+}
+
+@media (min-width: 827px) {
+	.ascii-art {
+		font-size: 0.3rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.ascii-art {
+		font-size: 0.45rem;
+	}
+}
+
+.blinking-cursor {
+	animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
 }

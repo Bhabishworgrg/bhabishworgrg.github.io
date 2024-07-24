@@ -6,7 +6,7 @@ function Navbar() {
 	}
 
 	return (
-		<nav className='bg-secondary sticky top-0 my-7 px-4 '>
+		<nav className='bg-secondary sticky top-0 my-7 px-4'>
 				<div className='flex items-center justify-between'>
 					{ /* Name */ }
 					<a
