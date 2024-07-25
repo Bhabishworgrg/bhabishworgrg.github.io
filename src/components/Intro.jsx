@@ -1,9 +1,9 @@
 function Intro() {
 	return (
 		<div id='intro' className='h-[95vh] flex items-center justify-center'>
-	  		<div className='bg-black rounded-lg max-w-4xl mx-2 sm:mx-6 md:mx-8 lg:mx-10 py-20 px-2 sm:px-4 md:px-6 lg:px-8'>
+	  		<div className='bg-secondary rounded-lg max-w-4xl mx-2 sm:mx-6 md:mx-8 lg:mx-10 py-20 px-2 sm:px-4 md:px-6 lg:px-8'>
 				<div className='mb-3'>
-					$ whoami
+					<span className='text-highlight'>$</span> whoami
 				</div>
 		 	
 				{/* ASCII Art */}
@@ -22,7 +22,7 @@ function Intro() {
 				</div>
 				
 				<div className='mt-3'>
-					$ cat tagline.txt
+					<span className='text-highlight'>$</span> cat tagline.txt
 					<br />
 					Building things, one commit at a time.
 			  	</div>
