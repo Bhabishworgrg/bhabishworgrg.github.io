@@ -2,12 +2,12 @@ function Intro() {
 	return (
 		<div id='intro' className='h-[95vh] flex items-center justify-center'>
 	  		<div className='bg-black rounded-lg max-w-4xl mx-2 sm:mx-6 md:mx-8 lg:mx-10 py-20 px-2 sm:px-4 md:px-6 lg:px-8'>
-				<p className='mb-3'>
+				<div className='mb-3'>
 					$ whoami
-				</p>
+				</div>
 		 	
 				{/* ASCII Art */}
-				<p className='ascii-art'>
+				<div className='ascii-art'>
 <pre>888888b.   888               888      d8b          888                                            .d8888b.                                              </pre>
 <pre>888  "88b  888               888      Y8P          888                                           d88P  Y88b                                             </pre>
 <pre>888  .88P  888               888                   888                                           888    888                                             </pre>
@@ -19,18 +19,18 @@ function Intro() {
 <pre>                                                                                                                                                    88b8</pre>
 <pre>                                                                                                                                               Y8b d88bP</pre>
 <pre>                                                                                                                                                "Y88P"  </pre>
-				</p>
+				</div>
 				
-				<p className='mt-3'>
+				<div className='mt-3'>
 					$ cat tagline.txt
 					<br />
 					Building things, one commit at a time.
-			  	</p>
+			  	</div>
 
-				<p className='mt-3'>
+				<div className='mt-3'>
 					$ 
 					<span className='blinking-cursor'>_</span>
-				</p>
+				</div>
 			</div>
 		</div>
 	);

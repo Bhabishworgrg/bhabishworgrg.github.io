@@ -1,8 +1,4 @@
-html {
-	scroll-padding-top: 4rem; /* Adjust this based on your navbar height */
-	background-color: #3B1C32;
-}
-
+/* Intro Title ASCII Art */
 .ascii-art {
 	font-size: 0.17rem;
 }
@@ -25,6 +21,7 @@ html {
 	}
 }
 
+/* Blinking Cursor */
 .blinking-cursor {
 	animation: 1s blink step-end infinite;
 }
