@@ -1,9 +1,9 @@
 function Skills() {  
-	function addSkill(filename) {
+	function addSkill(title, filename) {
 		return (
 			<>
 				<img src={ `/assets/${ filename }.png` } alt={ filename }/>
-				<span>{ filename }</span>
+				<span>{ title }</span>
 			</>
 		);
 	};
@@ -13,16 +13,16 @@ function Skills() {
 			<h1 id='skills'>Skills</h1>
 
 			<div>
-				{ addSkill('HTML CSS') }
-				{ addSkill('JavaScript') }
-				{ addSkill('React') }
-				{ addSkill('Java') }
-				{ addSkill('C#') }
-				{ addSkill('C') }
-				{ addSkill('Python') }
-				{ addSkill('Godot') }
-				{ addSkill('Git') }
-				{ addSkill('Linux') }
+				{ addSkill('HTML/CSS', 'html_css') }
+				{ addSkill('JavaScript', 'js') }
+				{ addSkill('React', 'react') }
+				{ addSkill('Java', 'java') }
+				{ addSkill('C#', 'csharp') }
+				{ addSkill('C', 'c') }
+				{ addSkill('Python', 'python') }
+				{ addSkill('Godot', 'godot') }
+				{ addSkill('Git', 'git') }
+				{ addSkill('Linux', 'linux') }
 			</div>
 		</>
 	);
