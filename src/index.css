@@ -9,7 +9,7 @@ html {
 
 @layer base {
 	h1 {
-   		@apply text-2xl lg:text-3xl font-semibold mb-6 mt-16;
+   		@apply text-2xl lg:text-3xl font-semibold mt-64;
 	}
 	p {
 		@apply text-lg lg:text-xl;

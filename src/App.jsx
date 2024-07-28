@@ -13,7 +13,7 @@ function App() {
 		<div className='text-tertiary mx-5 sm:mx-16 md:mx-36 lg:mx-48'>
 			<Navbar/>
 		
-			<div className='mx-20'>
+			<div className='mx-3 sm:mx-10 md:mx-14 lg:mx-20'>
 				<Intro/>
 				<About/>
 				<Skills/>
