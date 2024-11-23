@@ -1,6 +1,6 @@
 function Footer() {
 	return (
-		<footer>
+		<footer className='text-center'>
 			&copy; 2024 Bhabishwor Gurung.
 		</footer>
 	);

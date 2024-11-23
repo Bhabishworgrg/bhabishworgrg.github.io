@@ -1,3 +1,6 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+
 function Navbar() {
 	function scrollToSection(event, id) {
 		event.preventDefault();
@@ -6,18 +9,18 @@ function Navbar() {
 	}
 
 	return (
-		<nav className='bg-secondary sticky top-0 my-7 px-4'>
+		<nav className='bg-secondary sticky top-0 my-7 px-4 py-1'>
 				<div className='flex items-center justify-between'>
 					{ /* Name */ }
 					<a
 					href='#'
-					className='text-tertiary text-lg font-bold'
+					className='text-tertiary font-bold hover:text-highlight hover:scale-125 transition-transform'
 					>
 						Bhabishwor
 					</a>
 					
 					{ /* Navigation Links */ }
-					<div className='flex-col sm:flex-row sm:space-x-4 sm:justify-start sm:static sm:w-auto absolute top-full left-0 w-full bg-secondary sm:bg-transparent sm:flex sm:space-y-0'>
+					<div className='hidden md:flex md:px-2 md:space-x-2 md:w-auto bg-secondary'>
 						{[
 							{ name: 'Home', href: '#intro' },
 							{ name: 'About', href: '#about' },
@@ -28,7 +31,7 @@ function Navbar() {
 							<a
 							href={ item.href }
 							onClick={ (event) => scrollToSection(event, item.href) }
-							className='text-tertiary hover:text-highlight'
+							className='text-tertiary hover:text-highlight hover:scale-125 transition-transform'
 							>
 								{ item.name }
 							</a>
@@ -38,16 +41,17 @@ function Navbar() {
 					{ /* Social Links */ }
 					<div className='flex items-center space-x-4'>
 						{[
-							{ name: 'GitHub', href: 'https://github.com/Bhabishworgrg', target: '_blank' },
-							{ name: 'LinkedIn', href: 'https://www.linkedin.com/in/bhabishwor-grg', target: '_blank' },
-							{ name: 'Mail', href: 'mailto:bhabishworgrg@gmail.com' },
+							{ name: 'GitHub', icon:<FaGithub/>, href: 'https://github.com/Bhabishworgrg', target: '_blank' },
+							{ name: 'LinkedIn', icon:<FaLinkedin/>, href: 'https://www.linkedin.com/in/bhabishwor-grg', target: '_blank' },
+							{ name: 'Mail', icon:<IoIosMail/>, href: 'mailto:bhabishworgrg@gmail.com', target: '_blank' },
 						].map((item) => (
 							<a
 							href={ item.href }
 							target={ item.target }
-							className='text-tertiary hover:text-highlight'
+							alt={ item.name }
+							className='text-tertiary hover:text-highlight hover:scale-125 transition-transform'
 							>
-								{ item.name }	
+								{ item.icon }
 							</a>
 						))}
 					</div>

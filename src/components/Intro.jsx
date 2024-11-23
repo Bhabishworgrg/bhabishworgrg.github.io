@@ -1,9 +1,11 @@
 function Intro() {
+	const prompt = <span className='text-highlight'>$</span>;
+
 	return (
 		<div id='intro' className='h-[95vh] flex items-center justify-center'>
-	  		<div className='bg-secondary rounded-lg max-w-4xl mx-2 sm:mx-6 md:mx-8 lg:mx-10 py-20 px-2 sm:px-4 md:px-6 lg:px-8'>
+	  		<div className='bg-secondary rounded-3xl max-w-4xl mx-2 sm:mx-6 md:mx-8 lg:mx-10 py-8 sm:py-10 md:py-20 px-4 sm:px-8 md:px-10 lg:px-10'>
 				<div className='mb-3'>
-					<span className='text-highlight'>$</span> whoami
+					{ prompt } whoami
 				</div>
 		 	
 				{/* ASCII Art */}
@@ -22,14 +24,14 @@ function Intro() {
 				</div>
 				
 				<div className='mt-3'>
-					<span className='text-highlight'>$</span> cat tagline.txt
+					{ prompt } cat tagline.txt
 					<br />
 					Building things, one commit at a time.
 			  	</div>
 
 				<div className='mt-3'>
-					$ 
-					<span className='blinking-cursor'>_</span>
+					{ prompt }
+					<span className='blinking-cursor'> _</span>
 				</div>
 			</div>
 		</div>
