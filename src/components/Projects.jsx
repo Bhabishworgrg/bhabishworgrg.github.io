@@ -1,59 +1,68 @@
+import { FaGithub } from 'react-icons/fa';
+
 function Projects() {
-	const projects = {
-		'Project 1': {
-			image: '/assets/project1.jpg',
-			description: 'This is project 1',
-			techStack: 'React, Node, Express, MongoDB',
-			link: '',
+	const items = [
+		{
+			name: 'Turtle Graphics',
+			description: 'a paint tool to draw via commands',
+			techstack: 'java',
+			link: 'turtle-graphics',
 		},
-		'Project 2': {
-			image: '/assets/project2.jpg',
-			description: 'This is project 2',
-			techStack: 'Angular, Node, Express, MongoDB',
-			link: '',
+		{
+			name: 'Virtual Drumset',
+			description: 'a virtual drumset to play drums via keyboard or buttons',
+			techstack: 'html, css, javascript, tailwind',
+			link: 'virtual-drumset',
 		},
-		'Project 3': {
-			image: '/assets/project3.jpg',
-			description: 'This is project 3',
-			techStack: 'Vue, Node, Express, MongoDB',
-			link: '',
+		{
+			name: 'Memory Match',
+			description: 'a simple card matching game',
+			techstack: 'godot, c#',
+			link: 'memory-match',
 		},
-	};
-
-	function addProject(key) {
-		return (
-			<li className='projects-card'>
-				<div className='card-title'>
-					{ key }
-				</div>
-				
-				<div className='card-image'>
-					<img src={ projects[key]['image'] } alt={ key } />
-				</div>
-				
-				<div className='card-description'>
-					{ projects[key]['description'] }
-				</div>
-				
-				<div className='card-tech'>
-					{ projects[key]['techStack'] }
-				</div>
-
-				<a href={ projects[key]['link'] } target='_blank' rel='noreferrer'>
-				</a>
-			</li>
-		);
-	};
+		{
+			name: 'Pattern Matcher',
+			description: 'a cli tool to search for strings or patterns',
+			techstack: 'c#',
+			link: 'pattern-matcher',
+		},
+		{
+			name: 'Race for the Ace',
+			description: 'a card game to simulate shuffling and dealing of a deck',
+			techstack: 'python',
+			link: 'race-for-the-ace',
+		},
+	];
 
 	return (
 		<>
 			<h1 id='projects'>Projects</h1>
 
-			<ul className='projects-grid'>
-				{ addProject('Project 1') }
-				{ addProject('Project 2') }
-				{ addProject('Project 3') }
-			</ul>
+			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8'>
+				{ items.map((item) => (
+					<div className='bg-secondary p-10 group'>
+						<h2 className='inline-block group-hover:scale-110 transition-transform'>
+							{ item.name }
+						</h2>
+						
+						<a 
+						href={ `https://github.com/Bhabishworgrg/${ item.link }` }
+						target='_blank'
+						className='float-right text-2xl group-hover:scale-150 transition-transform hover:text-highlight'
+						>
+							<FaGithub />
+						</a>
+
+						<div className='py-8'>
+							{ item.description }
+						</div>
+						
+						<h4>
+							{ item.techstack }
+						</h4>
+					</div>
+				))}
+			</div>
 		</>
 	);
 };
