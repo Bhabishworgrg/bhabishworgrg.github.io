@@ -1,55 +1,71 @@
 function Experience() {
-	const experience = {
-		'Experience 1': {
-			company: 'ABC Company',
-			date: 'Jan 2019 - Dec 2020',
-			description: 'This is experience 1',
+	const items = [
+		{
+			position: 'AI Image Annotator',
+			company: 'Invisible Technologies',
+			date: 'Jul 2024 - Present',
+			description: [
+				'Annotated images for AI/ML models, ensuring accuracy and consistency.', 
+				'Collaborated with the team via Slack to provide high-quality annotations for model training.',
+				'Maintained project accuracy and throughput requirements consistently.',
+			],
 		},
-		'Experience 2': {
-			company: 'XYZ Company',
-			date: 'Jan 2021 - Dec 2022',
-			description: 'This is experience 2',
+		{
+			position: 'Data Annotator',
+			company: 'CloudFactory',
+			date: 'Nov 2021 - Present',
+			description: [
+				'Annotate on Dataloop, Hasty, Encord, or directly on the client\'s platform, for detailed analysis.',
+    			'Communicate with Team Captains via Zoom, Google Meet, and Slack to receive client updates.',
+    			'Help train new employees in the annotation process, ensuring they understand the tools and standards.',
+    			'Consistently maintain project-required accuracy and throughput levels.',
+			],
 		},
-		'Experience 3': {
-			company: 'PQR Company',
-			date: 'Jan 2023 - Dec 2024',
-			description: 'This is experience 3',
+		{
+			position: 'Bench Sales Recruiter',
+			company: 'Luzon Technologies',
+			date: 'Apr 2021 - Nov 2021',
+			description: [
+				'Marketed the bench consultants for Corp-To-Corp positions in the US IT industry.',
+				'Worked night shifts collaborating with the offshore US team via Slack and Google Meet.',
+				'Employed Boolean Search techniques to identify suitable requirements.',
+				'Coordinated with consultants and vendors to set up interviews using Google Calendar.',
+				'Maintained daily and weekly status reports of all activities in Google Sheets.',
+			],		
 		},
-	};
-
-	function addExperience(key) {
-		return (
-			<li className='experience-tab'>
-				<div className='card-title'>
-					{ key }
-				</div>
-
-				<div className='card-company'>
-					{ experience[key]['company'] }
-				</div>
-				
-				<div className='card-date'>
-					{ experience[key]['date'] }
-				</div>
-				
-				<div className='card-description'>
-					{ experience[key]['description'] }
-				</div>
-			</li>
-		);
-	}
+	];
 
 	return (
 		<>
 			<h1 id='experience'>Experience</h1>
 
-			<ul className='experience-list'>
-				{ addExperience('Experience 1') }
-				{ addExperience('Experience 2') }
-				{ addExperience('Experience 3') }
-			</ul>
+			<div className='grid grid-cols-1 gap-6 pt-8'>
+				{ items.map((item) => (
+					<div className='bg-secondary pl-20 p-10 group'>
+						<h2 className='group-hover:scale-110 transition-transform'>
+							{ item.position }
+						</h2>
+
+						<h3 className='group-hover:scale-110 duration-500 transition-transform'>
+							{ item.company }
+						</h3>
+						
+						<h4 className='group-hover:scale-110 duration-700 transition-transform'>
+							{ item.date }
+						</h4>
+						
+						<ul className='list-square marker:text-highlight pl-5 group-hover:scale-110 duration-1000 transition-transform'>
+							{ item.description.map((item) => (
+								<li>
+									{ item }
+								</li>
+    	    				))}
+    	  				</ul>
+					</div>
+				))}
+			</div>
 		</>
 	);
-}
+};
 
 export default Experience;

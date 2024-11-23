@@ -12,6 +12,9 @@ export default {
 				'tertiary': '#BFBFDE', // Text color
 				'highlight': '#E07A5F', // Secondary color (hover effects)
 			},
+			listStyleType: {
+				square: 'square',
+			},
 		},
 	},
 	plugins: [],
