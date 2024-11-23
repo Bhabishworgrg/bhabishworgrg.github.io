@@ -43,7 +43,7 @@ function Projects() {
 				</a>
 			</li>
 		);
-	}
+	};
 
 	return (
 		<>
@@ -56,6 +56,6 @@ function Projects() {
 			</ul>
 		</>
 	);
-}
+};
 
 export default Projects;

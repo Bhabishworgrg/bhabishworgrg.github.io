@@ -2,16 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	scroll-padding-top: 3rem;
-	background-color: #3B1C32;
-}
-
 @layer base {
-	h1 {
-   		@apply text-2xl lg:text-3xl font-semibold mt-64;
+	html {
+		@apply bg-primary text-tertiary scroll-pt-12;
 	}
-	p {
+	h1 {
+   		@apply text-2xl lg:text-3xl font-bold mt-36;
+	}
+	h2 {
+		@apply text-xl lg:text-2xl font-semibold;
+	}
+	h3 {
+		@apply text-lg lg:text-xl font-medium;
+	}
+	h4 {
+		@apply text-base lg:text-lg italic;
+	}
+	p, ul {
 		@apply text-lg lg:text-xl;
 	}
 }

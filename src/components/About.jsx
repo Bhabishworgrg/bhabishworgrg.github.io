@@ -15,6 +15,6 @@ I’m currently pursuing a BSc (H) in Computing degree at The British College, K
 			</div>
 		</>
 	);
-}
+};
 
 export default About;

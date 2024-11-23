@@ -6,15 +6,15 @@ function Navbar() {
 		event.preventDefault();
 		document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
 		setMenuOpen(false);
-	}
+	};
 
 	return (
-		<nav className='bg-secondary sticky top-0 my-7 px-4 py-1'>
+		<nav className='bg-secondary sticky top-0 my-7 px-4 py-1 z-50'>
 				<div className='flex items-center justify-between'>
 					{ /* Name */ }
 					<a
 					href='#'
-					className='text-tertiary font-bold hover:text-highlight hover:scale-125 transition-transform'
+					className='font-bold hover:text-highlight hover:scale-125 transition-transform'
 					>
 						Bhabishwor
 					</a>
@@ -31,7 +31,7 @@ function Navbar() {
 							<a
 							href={ item.href }
 							onClick={ (event) => scrollToSection(event, item.href) }
-							className='text-tertiary hover:text-highlight hover:scale-125 transition-transform'
+							className='hover:text-highlight hover:scale-125 transition-transform'
 							>
 								{ item.name }
 							</a>
@@ -49,7 +49,7 @@ function Navbar() {
 							href={ item.href }
 							target={ item.target }
 							alt={ item.name }
-							className='text-tertiary hover:text-highlight hover:scale-125 transition-transform'
+							className='hover:text-highlight hover:scale-125 transition-transform'
 							>
 								{ item.icon }
 							</a>
@@ -58,6 +58,6 @@ function Navbar() {
 				</div>
 		</nav>
 	);
-}
+};
 
 export default Navbar;
