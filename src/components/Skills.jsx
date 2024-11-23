@@ -1,33 +1,44 @@
 function Skills() {  
 	const items = [
-		{ image: '/assets/html_css.png', label: 'HTML/CSS' },
-		{ image: '/assets/js.png', label: 'JavaScript' },
-		{ image: '/assets/react.png', label: 'React' },
-		{ image: '/assets/java.png', label: 'Java' },
-		{ image: '/assets/csharp.png', label: 'C#' },
-		{ image: '/assets/c.png', label: 'C' },
-		{ image: '/assets/python.png', label: 'Python' },
-		{ image: '/assets/godot.png', label: 'Godot' },
-		{ image: '/assets/git.png', label: 'Git' },
-		{ image: '/assets/linux.png', label: 'Linux' },
+		{ skill: 'html-css', label: 'HTML/CSS' },
+		{ skill: 'js', label: 'JavaScript' },
+		{ skill: 'react', label: 'React' },
+		{ skill: 'java', label: 'Java' },
+		{ skill: 'csharp', label: 'C#' },
+		{ skill: 'c', label: 'C' },
+		{ skill: 'python', label: 'Python' },
+		{ skill: 'godot', label: 'Godot' },
+		{ skill: 'git', label: 'Git' },
+		{ skill: 'linux', label: 'Linux' },
 	];
+
+	function setLink(skill) {
+		return skill === 'git' 
+			? 'https://github.com/Bhabishworgrg?tab=repositories' 
+			: `https://github.com/stars/Bhabishworgrg/lists/${ skill }`;
+	};
 
 	return (
 		<>
 			<h1 id='skills'>Skills</h1>
 
-    		<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-4'>
+    		<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-8'>
       			{ items.map((item) => (
-        			<div
-          			className='flex flex-col items-center bg-secondary p-4'
+        			<a
+					href={ setLink(item.skill) }
+          			target='_blank'
+					className='group flex flex-col items-center bg-secondary p-4'
         			>
           				<img
-            			src={ item.image }
+            			src={ `/assets/${ item.skill }.png` }
             			alt={ item.label }
-            			className='w-24 h-24 object-cover mb-2 hover:scale-125 transform transition-transform hover:saturate-150'
+            			className='w-24 h-24 mb-2 group-hover:scale-125 transition-transform group-hover:saturate-150'
           				/>
-          				<span className='text-tertiary'>{item.label}</span>
-        			</div>
+          				
+						<span className='group-hover:scale-125 transition-transform group-hover:text-highlight'>
+							{ item.label }
+						</span>
+        			</a>
       			))}
     		</div>
 		</>
