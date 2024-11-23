@@ -42,7 +42,7 @@ function Navbar() {
 					<div className='flex items-center space-x-4'>
 						{[
 							{ name: 'GitHub', icon:<FaGithub/>, href: 'https://github.com/Bhabishworgrg', target: '_blank' },
-							{ name: 'LinkedIn', icon:<FaLinkedin/>, href: 'https://www.linkedin.com/in/bhabishwor-grg', target: '_blank' },
+							{ name: 'LinkedIn', icon:<FaLinkedin/>, href: 'https://www.linkedin.com/in/bhabishwor-gurung', target: '_blank' },
 							{ name: 'Mail', icon:<IoIosMail/>, href: 'mailto:bhabishworgrg@gmail.com', target: '_blank' },
 						].map((item) => (
 							<a
