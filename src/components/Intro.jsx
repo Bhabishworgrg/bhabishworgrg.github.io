@@ -1,8 +1,34 @@
 function Intro() {
 	const prompt = <span className='text-highlight'>$</span>;
 
+	function downloadResume() {
+		const command = ' curl -O https://bhabishworgrg.github.io/resume.docx';
+		const commandElement = document.getElementById('command-element');
+
+		commandElement.innerHTML = '';
+
+		let index = 0;
+		const typingInterval = setInterval(() => {
+			if (index < command.length) {
+				commandElement.innerHTML += command[index];
+				index++;
+			}
+			else {
+				const link = document.createElement('a');
+				link.href = '/resume.docx';
+				link.download = 'resume.docx';
+				document.body.appendChild(link);
+				link.click();
+				document.body.removeChild(link);
+				clearInterval(typingInterval);
+			}
+		}, 20);
+		
+
+	};
+
 	return (
-		<div id='intro' className='h-[95vh] flex items-center justify-center'>
+		<div id='intro' className='h-[95vh] flex flex-col items-center justify-center'>
 	  		<div className='bg-secondary rounded-3xl max-w-4xl mx-2 sm:mx-6 md:mx-8 lg:mx-10 py-8 sm:py-10 md:py-20 px-4 sm:px-8 md:px-10 lg:px-10'>
 				<div className='mb-3'>
 					{ prompt } whoami
@@ -31,9 +57,16 @@ function Intro() {
 
 				<div className='mt-3'>
 					{ prompt }
-					<span className='blinking-cursor'> _</span>
+					<span id='command-element'> </span>
+					<span className='blinking-cursor'>_</span>
 				</div>
 			</div>
+
+			<button 
+			className='text-xs sm:text-sm lg:text-base m-4 lg:ml-4 lg:m-10 p-2 bg-secondary text-tertiary hover:text-highlight hover:scale-110 transition-transform'
+			onClick={ () => downloadResume() }>
+				Download Resume
+			</button>
 		</div>
 	);
 };
