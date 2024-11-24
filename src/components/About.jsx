@@ -9,7 +9,7 @@ I’m currently pursuing a BSc (H) in Computing degree at The British College, K
 				</p>
 				
 				<img
-				src={ '/assets/me.png' }
+				src={ '/me.png' }
 				alt='img: me.png'
 				className='rounded-tl-3xl rounded-br-3xl border-highlight border-4 lg:ml-16 mt-16 lg:mt-0 w-[230px] sm:w-[270px] md:w-[300px] lg:w-[250px] h-auto'/>
 			</div>

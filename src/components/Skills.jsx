@@ -30,7 +30,7 @@ function Skills() {
 					className='group flex flex-col items-center bg-secondary p-4'
         			>
           				<img
-            			src={ `/assets/${ item.skill }.png` }
+            			src={ `/skills/${ item.skill }.png` }
             			alt={ item.label }
             			className='w-24 h-24 mb-2 group-hover:scale-125 transition-transform group-hover:saturate-150'
           				/>
