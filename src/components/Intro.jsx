@@ -2,7 +2,7 @@ function Intro() {
 	const prompt = <span className='text-highlight'>$</span>;
 
 	function downloadResume() {
-		const command = ' curl -O https://bhabishworgrg.github.io/resume.docx';
+		const command = ' curl -O https://bhabishworgrg.github.io/resume.pdf';
 		const commandElement = document.getElementById('command-element');
 
 		commandElement.innerHTML = '';
@@ -15,8 +15,8 @@ function Intro() {
 			}
 			else {
 				const link = document.createElement('a');
-				link.href = '/resume.docx';
-				link.download = 'resume.docx';
+				link.href = '/resume.pdf';
+				link.download = 'resume.pdf';
 				document.body.appendChild(link);
 				link.click();
 				document.body.removeChild(link);
