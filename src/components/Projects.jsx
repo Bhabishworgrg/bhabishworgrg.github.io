@@ -3,6 +3,18 @@ import { FaGithub, FaLink } from 'react-icons/fa';
 function Projects() {
 	const items = [
 		{
+			name: 'PushPod',
+			description: 'a git hosting platform',
+			techstack: 'asp.net mvc, c#, sqlite',
+			repo: 'pushpod',
+		},
+		{
+			name: 'Helpdesk System',
+			description: 'a helpdesk system to manage tickets',
+			techstack: 'odoo, python',
+			repo: 'helpdesk-system',
+		},
+		{
 			name: 'Turtle Graphics',
 			description: 'a paint tool to draw via commands',
 			techstack: 'java',
@@ -11,8 +23,21 @@ function Projects() {
 		{
 			name: 'Virtual Drumset',
 			description: 'a virtual drumset to play drums via keyboard or buttons',
-			techstack: 'html, css, javascript, tailwind',
+			techstack: 'html, css, javascript',
 			repo: 'virtual-drumset',
+			link: 'https://bhabishworgrg.github.io/virtual-drumset/',
+		},
+		{
+			name: 'BOOSE Interpreter',
+			description: 'an interpreter for BOOSE, a custom graphical programming language',
+			techstack: '.net core, c#',
+			repo: 'BOOSE-interpreter',
+		},
+		{
+			name: 'Project Cleckhuddersfax Market Hub',
+			description: 'an e-commerce website (group project)',
+			techstack: 'html, css, php, javascript, bootstrap, oracle apex',
+			repo: 'project-cleckhuddersfax-market-hub',
 		},
 		{
 			name: 'Memory Match',
@@ -23,14 +48,44 @@ function Projects() {
 		{
 			name: 'Pattern Matcher',
 			description: 'a cli tool to search for strings or patterns',
-			techstack: 'c#',
-			link: 'pattern-matcher',
+			techstack: '.net core, c#, bash',
+			repo: 'pattern-matcher',
+		},
+		{
+			name: 'Monsetor',
+			description: 'a multi-monitor management tool for X11 & i3wm',
+			techstack: 'bash',
+			repo: 'monsetor',
+		},
+		{
+			name: 'Bhabeasy',
+			description: 'a java maven archetype curated for beginners',
+			techstack: 'java, maven',
+			repo: 'bhabeasy',
+		},
+		{
+			name: 'Init OpenCV',
+			description: 'a project initializer for OpenCV in C++',
+			techstack: 'bash',
+			repo: 'init-opencv',
 		},
 		{
 			name: 'Race for the Ace',
-			description: 'a card game to simulate shuffling and dealing of a deck',
+			description: 'a card game simulator',
 			techstack: 'python',
-			link: 'race-for-the-ace',
+			repo: 'race-for-the-ace',
+		},
+		{
+			name: 'Rainfall Stats Analyser',
+			description: 'a rainfall statistics analyser',
+			techstack: 'python',
+			repo: 'rainfall-stats-analyser',
+		},
+		{
+			name: 'Checkout Process Simulator',
+			description: 'a checkout process simulator',
+			techstack: 'python',
+			repo: 'checkout-process-simulator',
 		},
 	];
 
