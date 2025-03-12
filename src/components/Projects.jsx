@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
 function Projects() {
 	const items = [
@@ -120,6 +121,24 @@ function Projects() {
 					<h3 className='text-2xl'>{items[current].name}</h3>
 					<p className='text-sm'>{items[current].description}</p>
 					<em className='text-highlight'>{items[current].techstack}</em>
+					<div className='flex justify-center mt-4 gap-4'>
+						<a 
+							href={ `https://github.com/Bhabishworgrg/${ items[current].repo }` }
+							target='_blank'
+							className='hover:text-highlight hover:scale-150 transition-transform'
+						>									
+							<FaGithub />
+						</a>
+						{ items[current].link &&
+							<a 
+								href={ items[current].link }
+								target='_blank'
+								className='hover:text-highlight hover:scale-150 transition-transform'
+							>
+								<FaLink />
+							</a>
+						}
+					</div>
 				</div>
 				<button onClick={nextSlide} className='absolute right-0 p-2 bg-gray-700 text-white rounded-r'>❯</button>
 			</div>
