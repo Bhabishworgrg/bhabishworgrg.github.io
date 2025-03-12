@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaGithub, FaLink } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function Projects() {
 	const items = [
@@ -26,7 +27,7 @@ function Projects() {
 		},
 		{
 			name: 'Virtual Drumset',
-			description: 'a virtual drumset to play drums via keyboard or buttons',
+			description: 'drums to play via keyboard or buttons',
 			techstack: 'html, css, javascript',
 			repo: 'virtual-drumset',
 			image: '/projects/virtual-drumset.png',
@@ -34,7 +35,7 @@ function Projects() {
 		},
 		{
 			name: 'BOOSE Interpreter',
-			description: 'an interpreter for BOOSE, a custom graphical programming language',
+			description: 'an interpreter for BOOSE, a custom language',
 			techstack: '.net core, c#',
 			repo: 'BOOSE-interpreter',
 			image: '/projects/BOOSE-interpreter.png',
@@ -55,7 +56,7 @@ function Projects() {
 		},
 		{
 			name: 'Pattern Matcher',
-			description: 'a cli tool to search for strings or patterns',
+			description: 'a grep clone',
 			techstack: '.net core, c#, bash',
 			repo: 'pattern-matcher',
 			image: '/projects/pattern-matcher.png',
@@ -104,43 +105,92 @@ function Projects() {
 		},
 	];
 
-	const [current, setCurrent] = useState(0);
-	const nextSlide = () => setCurrent((current + 1) % items.length);
-	const prevSlide = () => setCurrent((current - 1 + items.length) % items.length);
+	const [itemsPerPage, setItemsPerPage] = useState(4);
+	const [currentPage, setCurrentPage] = useState(0);
+
+	useEffect(() => {
+		const updateItemsPerPage = () => {
+			setItemsPerPage(window.innerWidth < 640 ? 1 : 4);
+		};
+
+		updateItemsPerPage();
+		window.addEventListener("resize", updateItemsPerPage);
+		return () => window.removeEventListener("resize", updateItemsPerPage);
+	}, []);
+
+	const totalPages = Math.ceil(items.length / itemsPerPage);
+
+	const nextSlide = () => setCurrentPage((currentPage + 1) % totalPages);
+	const prevSlide = () => setCurrentPage((currentPage - 1 + totalPages) % totalPages);
 
 	return (
 		<>
-			<h1 id='projects'>Projects</h1>
+			<h1 id="projects">Projects</h1>
 
-			<div
-				className='relative flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat'
-				style={{ backgroundImage: `url(${ items[current].image })` }}
-			>
-				<button onClick={prevSlide} className='absolute left-0 p-2 bg-gray-700 text-white rounded-l'>❮</button>
-				<div className='text-center p-4'>
-					<h3 className='text-2xl'>{items[current].name}</h3>
-					<p className='text-sm'>{items[current].description}</p>
-					<em className='text-highlight'>{items[current].techstack}</em>
-					<div className='flex justify-center mt-4 gap-4'>
-						<a 
-							href={ `https://github.com/Bhabishworgrg/${ items[current].repo }` }
-							target='_blank'
-							className='hover:text-highlight hover:scale-150 transition-transform'
-						>									
-							<FaGithub />
-						</a>
-						{ items[current].link &&
-							<a 
-								href={ items[current].link }
-								target='_blank'
-								className='hover:text-highlight hover:scale-150 transition-transform'
-							>
-								<FaLink />
-							</a>
-						}
-					</div>
+			<div className="relative flex flex-col items-center mt-8">
+				<button
+					onClick={prevSlide}
+					className="absolute top-1/2 left-5 text-tertiary hover:text-highlight hover:scale-150 transition-transform">
+					❮
+				</button>
+
+				<AnimatePresence mode="wait">
+					<motion.div
+						key={ currentPage }
+						initial={{ opacity: 0, x: 50 }}
+						animate={{ opacity: 1, x: 0 }}
+						exit={{ opacity: 0, x: -50 }}
+						transition={{ duration: 0.4 }}
+						className={ `grid ${ itemsPerPage === 1 ? "grid-cols-1" : "grid-cols-2" } gap-4` }
+					>
+						{ items.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).map((item, index) => (
+							<div key={ index } className="bg-secondary p-6 text-center">
+								<h3 className="text-xl font-semibold">
+									{ item.name }
+								</h3>
+								<p className="text-base">
+									{ item.description }
+								</p>
+								<p className="text-highlight mt-2 text-base">
+									<em>{ item.techstack }</em>
+								</p>
+								<div className="flex justify-center mt-4 gap-6">
+									<a
+										href={ `https://github.com/Bhabishworgrg/${ item.repo }` }
+										target="_blank"
+										className="hover:text-highlight hover:scale-150 transition-transform"
+									>
+										<FaGithub size="24" />
+									</a>
+									{ item.link &&
+										<a
+											href={ item.link }
+											target="_blank"
+											className="hover:text-highlight hover:scale-150 transition-transform"
+										>
+											<FaLink size="24" />
+										</a>
+									}
+								</div>
+							</div>
+						))}
+					</motion.div>
+				</AnimatePresence>
+
+				<button
+					onClick={nextSlide}
+					className="absolute top-1/2 right-5 text-tertiary hover:text-highlight hover:scale-150 transition-transform">
+					❯
+				</button>
+
+				<div className="flex gap-2 mt-6">
+					{ Array.from({ length: totalPages }).map((_, index) => (
+						<div
+							key={ index }
+							className={ `h-2 w-2 ${ index === currentPage ? "bg-highlight" : "bg-tertiary" }` }
+						/>
+					))}
 				</div>
-				<button onClick={nextSlide} className='absolute right-0 p-2 bg-gray-700 text-white rounded-r'>❯</button>
 			</div>
 		</>
 	);
