@@ -1,4 +1,4 @@
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
 function Projects() {
 	const items = [
@@ -6,19 +6,19 @@ function Projects() {
 			name: 'Turtle Graphics',
 			description: 'a paint tool to draw via commands',
 			techstack: 'java',
-			link: 'turtle-graphics',
+			repo: 'turtle-graphics',
 		},
 		{
 			name: 'Virtual Drumset',
 			description: 'a virtual drumset to play drums via keyboard or buttons',
 			techstack: 'html, css, javascript, tailwind',
-			link: 'virtual-drumset',
+			repo: 'virtual-drumset',
 		},
 		{
 			name: 'Memory Match',
 			description: 'a simple card matching game',
 			techstack: 'godot, c#',
-			link: 'memory-match',
+			repo: 'memory-match',
 		},
 		{
 			name: 'Pattern Matcher',
@@ -41,17 +41,29 @@ function Projects() {
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8'>
 				{ items.map((item) => (
 					<div className='bg-secondary p-10 group'>
-						<h2 className='inline-block group-hover:scale-110 transition-transform'>
-							{ item.name }
-						</h2>
-						
-						<a 
-						href={ `https://github.com/Bhabishworgrg/${ item.link }` }
-						target='_blank'
-						className='float-right text-2xl group-hover:scale-150 transition-transform hover:text-highlight'
-						>
-							<FaGithub />
-						</a>
+						<div className='flex justify-between'>
+							<h2 className='inline-block'>
+								{ item.name }
+							</h2>
+							<div className='flex gap-[10px] text-2xl group-hover:scale-150 transition-transform'>
+								<a 
+									href={ `https://github.com/Bhabishworgrg/${ item.repo }` }
+									target='_blank'
+									className='hover:text-highlight'
+								>
+									<FaGithub />
+								</a>
+								{ item.link &&
+									<a 
+										href={ item.link }
+										target='_blank'
+										className='hover:text-highlight'
+									>
+										<FaLink />
+									</a>
+								}
+							</div>
+						</div>	
 
 						<div className='py-8'>
 							{ item.description }
