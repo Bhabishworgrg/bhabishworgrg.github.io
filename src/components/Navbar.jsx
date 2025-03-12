@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { IoIosMail } from 'react-icons/io';
 
 function Navbar() {
 	function scrollToSection(event, id) {
@@ -14,13 +14,13 @@ function Navbar() {
 					{ /* Name */ }
 					<a
 					href='#'
-					className='font-bold hover:text-highlight hover:scale-125 transition-transform'
+					className='font-bold text-lg hover:text-highlight hover:scale-110 transition-transform'
 					>
 						Bhabishwor
 					</a>
 					
 					{ /* Navigation Links */ }
-					<div className='hidden md:flex md:px-2 md:space-x-2 md:w-auto bg-secondary'>
+					<div className='hidden text-lg md:flex md:px-2 md:space-x-2 md:w-auto'>
 						{[
 							{ name: 'Home', href: '#intro' },
 							{ name: 'About', href: '#about' },
@@ -29,9 +29,9 @@ function Navbar() {
 							{ name: 'Experience', href: '#experience' },
 						].map((item) => (
 							<a
-							href={ item.href }
-							onClick={ (event) => scrollToSection(event, item.href) }
-							className='hover:text-highlight hover:scale-125 transition-transform'
+								href={ item.href }
+								onClick={ (event) => scrollToSection(event, item.href) }
+								className='hover:text-highlight hover:scale-110 transition-transform'
 							>
 								{ item.name }
 							</a>
@@ -39,7 +39,7 @@ function Navbar() {
 					</div>
 
 					{ /* Social Links */ }
-					<div className='flex items-center space-x-4'>
+					<div className='flex items-center space-x-4 text-xl'>
 						{[
 							{ name: 'GitHub', icon:<FaGithub/>, href: 'https://github.com/Bhabishworgrg', target: '_blank' },
 							{ name: 'LinkedIn', icon:<FaLinkedin/>, href: 'https://www.linkedin.com/in/bhabishwor-gurung', target: '_blank' },
