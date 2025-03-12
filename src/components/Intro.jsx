@@ -28,9 +28,9 @@ function Intro() {
 	};
 
 	return (
-		<div id='intro' className='h-[95vh] flex flex-col items-center justify-center'>
-	  		<div className='bg-secondary rounded-3xl max-w-4xl mx-2 sm:mx-6 md:mx-8 lg:mx-10 py-8 sm:py-10 md:py-20 px-4 sm:px-8 md:px-10 lg:px-10'>
-				<div className='mb-3'>
+		<div id='intro' className='h-[80vh] sm:h-[90vh] lg:h-[95vh] flex flex-col items-center justify-center'>
+	  		<div className='bg-secondary max-w-4xl mx-2 sm:mx-6 md:mx-8 lg:mx-10 py-8 sm:py-10 md:py-20 px-4 sm:px-8 md:px-10 lg:px-10'>
+				<div className='mb-3 text-sm lg:text-base'>
 					{ prompt } whoami
 				</div>
 		 	
@@ -49,13 +49,13 @@ function Intro() {
 <pre>                                                                                                                                                "Y88P"  </pre>
 				</div>
 				
-				<div className='mt-3'>
+				<div className='mt-3 text-sm lg:text-base'>
 					{ prompt } cat tagline.txt
 					<br />
 					Building things, one commit at a time.
 			  	</div>
 
-				<div className='mt-3'>
+				<div className='mt-3 text-sm lg:text-base'>
 					{ prompt }
 					<span id='command-element'> </span>
 					<span className='blinking-cursor'>_</span>
@@ -63,7 +63,7 @@ function Intro() {
 			</div>
 
 			<button 
-			className='text-xs sm:text-sm lg:text-base m-4 lg:ml-4 lg:m-10 p-2 bg-secondary text-tertiary hover:text-highlight hover:scale-110 transition-transform'
+			className='m-4 lg:ml-4 lg:m-10 p-2 bg-secondary text-tertiary hover:text-highlight hover:scale-110 transition-transform text-sm lg:text-base'
 			onClick={ () => downloadResume() }>
 				Download Resume
 			</button>
