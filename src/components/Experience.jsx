@@ -52,19 +52,19 @@ function Experience() {
 						key={ item.position }
 					>
 						<div className='relative left-2 md:left-4 lg:left-8 group'>
-							<p className='text-base lg:text-lg font-semibold group-hover:scale-105 duration-300 transition-transform'>
+							<p className='text-base lg:text-lg font-semibold group-hover:scale-105 transition-transform'>
 								{ item.position }
 							</p>
 
-							<p className='text-base lg:text-lg group-hover:scale-105 duration-500 transition-transform'>
+							<p className='text-base lg:text-lg group-hover:scale-105 duration-300 transition-transform'>
 								{ item.company }
 							</p>
 
-							<p className='text-sm lg:text-base group-hover:scale-105 duration-700 transition-transform'>
+							<p className='text-sm lg:text-base group-hover:scale-105 duration-400 transition-transform'>
 								<em>{ item.date }</em>
 							</p>
 
-							<ul className='text-sm lg:text-base lg:pl-4 pt-2 list-square marker:text-highlight group-hover:scale-105 duration-1000 transition-transform'>
+							<ul className='text-sm lg:text-base lg:pl-4 pt-2 list-square marker:text-highlight group-hover:scale-105 duration-500 transition-transform'>
 								{ item.description.map((item) => (
 									<li>
 										{ item }
