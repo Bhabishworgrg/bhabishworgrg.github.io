@@ -26,9 +26,11 @@ function Skills() {
     		<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-8'>
       			{ items.map((item) => (
         			<a
+						key={ item.skill }
 						href={ setLink(item.skill) }
 						target='_blank'
-						className='group flex flex-col items-center bg-secondary p-4'
+						className='group flex flex-col items-center bg-secondary p-4 border border-transparent transition-all
+             hover:border-highlight hover:shadow-md hover:shadow-highlight'
         			>
           				<img
             				src={ `/skills/${ item.skill }.png` }
