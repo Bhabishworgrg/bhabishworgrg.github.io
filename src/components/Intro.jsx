@@ -63,7 +63,7 @@ function Intro() {
 			</div>
 
 			<button 
-			className='m-4 lg:ml-4 lg:m-10 p-2 bg-secondary text-tertiary hover:text-highlight hover:scale-110 transition-transform text-sm lg:text-base'
+			className='m-4 lg:ml-4 lg:m-10 p-2 bg-secondary text-sm lg:text-base text-tertiary border border-transparent shadow-md hover:text-highlight hover:border-highlight hover:shadow-highlight hover:scale-105 transition-transform'
 			onClick={ () => downloadResume() }>
 				Download Resume
 			</button>
