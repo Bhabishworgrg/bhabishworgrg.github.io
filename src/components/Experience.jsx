@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 function Experience() {
 	const items = [
 		{
@@ -5,9 +7,9 @@ function Experience() {
 			company: 'Invisible Technologies',
 			date: 'Jul 2024 - Present',
 			description: [
-				'Annotated images for AI/ML models, ensuring accuracy and consistency.', 
-				'Collaborated with the team via Slack to provide high-quality annotations for model training.',
-				'Maintained project accuracy and throughput requirements consistently.',
+				'Annotate images for AI/ML models, ensuring accuracy and consistency.', 
+				'Collaborate with the team via Slack to provide high-quality annotations.',
+				'Maintain project accuracy and throughput requirements consistently.',
 			],
 		},
 		{
@@ -15,9 +17,9 @@ function Experience() {
 			company: 'CloudFactory',
 			date: 'Nov 2021 - Present',
 			description: [
-				'Annotate on Dataloop, Hasty, Encord, or directly on the client\'s platform, for detailed analysis.',
-    			'Communicate with Team Captains via Zoom, Google Meet, and Slack to receive client updates.',
-    			'Help train new employees in the annotation process, ensuring they understand the tools and standards.',
+				'Annotate on Dataloop, Hasty, Encord and more for detailed analysis.',
+    			'Communicate with Team Captains via Zoom, and Slack for updates.',
+    			'Help train new employees, ensuring they understand the tools and standards.',
     			'Consistently maintain project-required accuracy and throughput levels.',
 			],
 		},
@@ -26,11 +28,11 @@ function Experience() {
 			company: 'Luzon Technologies',
 			date: 'Apr 2021 - Nov 2021',
 			description: [
-				'Marketed the bench consultants for Corp-To-Corp positions in the US IT industry.',
-				'Worked night shifts collaborating with the offshore US team via Slack and Google Meet.',
+				'Marketed bench consultants for CTC positions in the US IT industry.',
+				'Worked night shifts collaborating with the offshore team via Slack and Google Meet.',
 				'Employed Boolean Search techniques to identify suitable requirements.',
-				'Coordinated with consultants and vendors to set up interviews using Google Calendar.',
-				'Maintained daily and weekly status reports of all activities in Google Sheets.',
+				'Coordinated with consultants and vendors to set up interviews.',
+				'Maintained daily and weekly status reports of all activities.',
 			],		
 		},
 	];
@@ -39,29 +41,38 @@ function Experience() {
 		<>
 			<h1 id='experience'>Experience</h1>
 
+
 			<div className='grid grid-cols-1 gap-6 pt-8'>
 				{ items.map((item) => (
-					<div className='bg-secondary pl-20 p-10 group'>
-						<h2 className='group-hover:scale-110 transition-transform'>
-							{ item.position }
-						</h2>
+					<motion.div
+						className='bg-secondary p-10'
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5 }}
+						key={ item.position }
+					>
+						<div className='relative left-2 md:left-4 lg:left-8 group'>
+							<p className='text-base lg:text-lg font-semibold group-hover:scale-105 duration-300 transition-transform'>
+								{ item.position }
+							</p>
 
-						<h3 className='group-hover:scale-110 duration-500 transition-transform'>
-							{ item.company }
-						</h3>
-						
-						<h4 className='group-hover:scale-110 duration-700 transition-transform'>
-							{ item.date }
-						</h4>
-						
-						<ul className='list-square marker:text-highlight pl-5 group-hover:scale-110 duration-1000 transition-transform'>
-							{ item.description.map((item) => (
-								<li>
-									{ item }
-								</li>
-    	    				))}
-    	  				</ul>
-					</div>
+							<p className='text-base lg:text-lg group-hover:scale-105 duration-500 transition-transform'>
+								{ item.company }
+							</p>
+
+							<p className='text-sm lg:text-base group-hover:scale-105 duration-700 transition-transform'>
+								<em>{ item.date }</em>
+							</p>
+
+							<ul className='text-sm lg:text-base lg:pl-4 pt-2 list-square marker:text-highlight group-hover:scale-105 duration-1000 transition-transform'>
+								{ item.description.map((item) => (
+									<li>
+										{ item }
+									</li>
+								))}
+							</ul>
+						</div>
+					</motion.div>
 				))}
 			</div>
 		</>
