@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 function Skills() {  
 	const items = [
 		{ skill: 'dotnet', label: '.NET' },
@@ -19,18 +21,23 @@ function Skills() {
 	];
 
 	const setLink = (skill) => {
-		return `https://github.com/
-			${ skill === 'git' 
+		return `https://github.com/${
+			skill === 'git' 
 			? 'Bhabishworgrg?tab=repositories' 
-			: `stars/Bhabishworgrg/lists/${ skill }` }`;
+			: `stars/Bhabishworgrg/lists/${ skill }` 
+		}`;
 	};
+
+	const itemsAtStart = 9;
+	const [showAll, setShowAll] = useState(false);
+	const displayedItems = showAll ? items : items.slice(0, itemsAtStart);
 
 	return (
 		<>
 			<h1 id='skills'>Skills</h1>
 
     		<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-8'>
-      			{ items.map((item) => (
+      			{ displayedItems.map((item) => (
         			<a
 						key={ item.skill }
 						href={ setLink(item.skill) }
@@ -48,6 +55,15 @@ function Skills() {
 						</span>
         			</a>
       			))}
+
+				<button
+					onClick={ () => setShowAll(prevShowAll => !prevShowAll) }
+					className='bg-secondary col-span-3 p-4 border border-transparent shadow-md hover:border-highlight hover:shadow-highlight transition-transform group'
+				>
+					<p className='text-base group-hover:scale-110 group-hover:text-highlight transition-transform'>
+						{ showAll ? 'Show less' : 'Show more' }
+					</p>
+				</button>
     		</div>
 		</>
 	);
