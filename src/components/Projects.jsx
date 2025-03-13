@@ -133,7 +133,7 @@ function Projects() {
 			<div className='relative flex flex-col items-center mt-8'>
 				<button
 					onClick={prevSlide}
-					className='absolute top-1/2 left-5 text-tertiary hover:text-highlight hover:scale-150 transition-transform z-10'>
+					className='absolute top-1/2 left-5 text-xl lg:text-3xl text-tertiary hover:text-highlight hover:scale-150 transition-transform z-10'>
 					❮
 				</button>
 
@@ -182,7 +182,7 @@ function Projects() {
 
 				<button
 					onClick={nextSlide}
-					className='absolute top-1/2 right-5 text-tertiary hover:text-highlight hover:scale-150 transition-transform'>
+					className='absolute top-1/2 right-5 text-xl lg:text-3xl text-tertiary hover:text-highlight hover:scale-150 transition-transform'>
 					❯
 				</button>
 

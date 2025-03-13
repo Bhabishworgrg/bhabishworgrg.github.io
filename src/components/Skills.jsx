@@ -35,8 +35,7 @@ function Skills() {
 						key={ item.skill }
 						href={ setLink(item.skill) }
 						target='_blank'
-						className='group flex flex-col items-center bg-secondary p-4 border border-transparent transition-all
-             hover:border-highlight hover:shadow-md hover:shadow-highlight'
+						className='group flex flex-col items-center bg-secondary p-4 border border-transparent transition-all hover:border-highlight hover:shadow-md hover:shadow-highlight'
         			>
           				<img
             				src={ `/skills/${ item.skill }.png` }
