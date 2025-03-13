@@ -55,16 +55,16 @@ function Skills() {
 						</span>
         			</a>
       			))}
-
-				<button
-					onClick={ () => setShowAll(prevShowAll => !prevShowAll) }
-					className='bg-secondary col-span-3 p-4 border border-transparent shadow-md hover:border-highlight hover:shadow-highlight transition-transform group'
-				>
-					<p className='text-base group-hover:scale-110 group-hover:text-highlight transition-transform'>
-						{ showAll ? 'Show less' : 'Show more' }
-					</p>
-				</button>
     		</div>
+			
+			<button
+				onClick={ () => setShowAll(prevShowAll => !prevShowAll) }
+				className='mt-4 w-full bg-secondary p-4 border border-transparent shadow-md hover:border-highlight hover:shadow-highlight transition-transform group'
+			>
+				<p className='text-base group-hover:scale-110 group-hover:text-highlight transition-transform'>
+					{ showAll ? 'Show less' : 'Show more' }
+				</p>
+			</button>
 		</>
 	);
 };
