@@ -24,13 +24,25 @@ function Projects() {
 		const fetchRepos = async () => {
 			const response = await fetch('https://api.github.com/users/Bhabishworgrg/repos');
 			const data = await response.json();
-			const formattedData = data.map(repo => ({
-				name: repo.name,
-				description: repo.description,
-				techstack: repo.topics?.join(', '),
-				repoLink: repo.html_url,
-				link: repo.homepage || null
-			}));
+
+			const formatRepoName = (name) => name
+				.split('-')
+				.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+				.join(' ');
+			const excludedProjects = ['bhabishworgrg.github.io', 'Bhabishworgrg', 'dotfiles']
+			const formattedData = data
+				.filter(repo => 
+					!repo.fork &&
+					!excludedProjects.includes(repo.name)
+				)
+				.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
+				.map(repo => ({
+					name: formatRepoName(repo.name),
+					description: repo.description,
+					techstack: repo.topics?.join(', '),
+					repoLink: repo.html_url,
+					link: repo.homepage || null
+				}));
 			setProjects(formattedData);
 		};
 		fetchRepos();
