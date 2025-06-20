@@ -3,108 +3,7 @@ import { FaGithub, FaLink } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 function Projects() {
-	const items = [
-		{
-			name: 'PushPod',
-			description: 'a git hosting platform',
-			techstack: 'asp.net mvc, c#, sqlite',
-			repo: 'pushpod',
-			image: '/projects/pushpod.png',
-		},
-		{
-			name: 'Helpdesk System',
-			description: 'a helpdesk system to manage tickets',
-			techstack: 'odoo, python',
-			repo: 'helpdesk-system',
-			image: '/projects/helpdesk-system.png',
-		},
-		{
-			name: 'Turtle Graphics',
-			description: 'a paint tool to draw via commands',
-			techstack: 'java',
-			repo: 'turtle-graphics',
-			image: '/projects/turtle-graphics.png',
-		},
-		{
-			name: 'Virtual Drumset',
-			description: 'drums to play via keyboard or buttons',
-			techstack: 'html, css, javascript',
-			repo: 'virtual-drumset',
-			image: '/projects/virtual-drumset.png',
-			link: 'https://bhabishworgrg.github.io/virtual-drumset/',
-		},
-		{
-			name: 'BOOSE Interpreter',
-			description: 'an interpreter for BOOSE, a custom language',
-			techstack: '.net core, c#',
-			repo: 'BOOSE-interpreter',
-			image: '/projects/BOOSE-interpreter.png',
-		},
-		{
-			name: 'Cleckhuddersfax Market Hub',
-			description: 'an e-commerce website (group project)',
-			techstack: 'html, css, php, javascript, bootstrap, oracle apex',
-			repo: 'cleckhuddersfax-market-hub',
-			image: '/projects/cleckhuddersfax-market-hub.png',
-		},
-		{
-			name: 'Memory Match',
-			description: 'a simple card matching game',
-			techstack: 'godot, c#',
-			repo: 'memory-match',
-			image: '/projects/memory-match.png',
-		},
-		{
-			name: 'Pattern Matcher',
-			description: 'a grep clone',
-			techstack: '.net core, c#, bash',
-			repo: 'pattern-matcher',
-			image: '/projects/pattern-matcher.png',
-		},
-		{
-			name: 'Monsetor',
-			description: 'a multi-monitor management tool for X11 & i3wm',
-			techstack: 'bash',
-			repo: 'monsetor',
-			image: '/projects/monsetor.png',
-		},
-		{
-			name: 'Bhabeasy',
-			description: 'a java maven archetype curated for beginners',
-			techstack: 'java, maven',
-			repo: 'bhabeasy',
-			image: '/projects/bhabeasy.png',
-		},
-		{
-			name: 'Init OpenCV',
-			description: 'a project initializer for OpenCV in C++',
-			techstack: 'bash',
-			repo: 'init-opencv',
-			image: '/projects/init-opencv.png',
-		},
-		{
-			name: 'Race for the Ace',
-			description: 'a card game simulator',
-			techstack: 'python',
-			repo: 'race-for-the-ace',
-			image: '/projects/race-for-the-ace.png',
-		},
-		{
-			name: 'Rainfall Stats Analyser',
-			description: 'a rainfall statistics analyser',
-			techstack: 'python',
-			repo: 'rainfall-stats-analyser',
-			image: '/projects/rainfall-stats-analyser.png',
-		},
-		{
-			name: 'Checkout Process Simulator',
-			description: 'a checkout process simulator',
-			techstack: 'python',
-			repo: 'checkout-process-simulator',
-			image: '/projects/checkout-process-simulator.png',
-		},
-	];
-
+	const [projects, setProjects] = useState([]);
 	const [itemsPerPage, setItemsPerPage] = useState(4);
 	const [currentPage, setCurrentPage] = useState(0);
 	const [isMobile, setIsMobile] = useState(false);
@@ -121,8 +20,23 @@ function Projects() {
 		return () => window.removeEventListener('resize', updateItemsPerPage);
 	}, []);
 
-	const totalPages = Math.ceil(items.length / itemsPerPage);
+	useEffect(() => {
+		const fetchRepos = async () => {
+			const response = await fetch('https://api.github.com/users/Bhabishworgrg/repos');
+			const data = await response.json();
+			const formattedData = data.map(repo => ({
+				name: repo.name,
+				description: repo.description,
+				techstack: repo.topics?.join(', '),
+				repoLink: repo.html_url,
+				link: repo.homepage || null
+			}));
+			setProjects(formattedData);
+		};
+		fetchRepos();
+	});
 
+	const totalPages = Math.ceil(projects.length / itemsPerPage);
 	const nextSlide = () => setCurrentPage((currentPage + 1) % totalPages);
 	const prevSlide = () => setCurrentPage((currentPage - 1 + totalPages) % totalPages);
 
@@ -146,7 +60,7 @@ function Projects() {
 						transition={{ duration: 0.4 }}
 						className={ `grid ${ isMobile ? 'grid-cols-1 w-full' : 'grid-cols-2' } gap-4` }
 					>
-						{ items.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).map((item, index) => (
+						{ projects.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).map((item, index) => (
 							<div key={ index } className={ `bg-secondary p-6 text-center ${ isMobile ? 'w-full' : '' } `}>
 								<h3 className='text-xl font-semibold'>
 									{ item.name }
@@ -159,7 +73,7 @@ function Projects() {
 								</p>
 								<div className='flex justify-center mt-4 gap-6'>
 									<a
-										href={ `https://github.com/Bhabishworgrg/${ item.repo }` }
+										href={ item.repoLink }
 										target='_blank'
 										className='hover:text-highlight hover:scale-150 transition-transform'
 									>
@@ -197,6 +111,6 @@ function Projects() {
 			</div>
 		</>
 	);
-}
+};
 
 export default Projects;
