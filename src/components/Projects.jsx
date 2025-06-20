@@ -22,31 +22,12 @@ function Projects() {
 
 	useEffect(() => {
 		const fetchRepos = async () => {
-			const response = await fetch('https://api.github.com/users/Bhabishworgrg/repos');
+			const response = await fetch('/repos.json');
 			const data = await response.json();
-
-			const formatRepoName = (name) => name
-				.split('-')
-				.map(word => word.charAt(0).toUpperCase() + word.slice(1))
-				.join(' ');
-			const excludedProjects = ['bhabishworgrg.github.io', 'Bhabishworgrg', 'dotfiles']
-			const formattedData = data
-				.filter(repo => 
-					!repo.fork &&
-					!excludedProjects.includes(repo.name)
-				)
-				.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
-				.map(repo => ({
-					name: formatRepoName(repo.name),
-					description: repo.description,
-					techstack: repo.topics?.join(', '),
-					repoLink: repo.html_url,
-					link: repo.homepage || null
-				}));
-			setProjects(formattedData);
+			setProjects(data);
 		};
 		fetchRepos();
-	});
+	}, []);
 
 	const totalPages = Math.ceil(projects.length / itemsPerPage);
 	const nextSlide = () => setCurrentPage((currentPage + 1) % totalPages);
