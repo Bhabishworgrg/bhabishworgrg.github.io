@@ -6,8 +6,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
+		"prebuild": "node fetchRepos.js",
 		"build": "vite build",
-		"lint": "eslint .",
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d dist"
 	},
