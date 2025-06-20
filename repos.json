@@ -1,0 +1,149 @@
+[
+  {
+    "name": "BOOSE Interpreter",
+    "description": "Interpreter for BOOSE language",
+    "techstack": "csharp, dotnet, winforms",
+    "repoLink": "https://github.com/Bhabishworgrg/BOOSE-interpreter",
+    "link": "https://bhabishworgrg.github.io/BOOSE-interpreter/"
+  },
+  {
+    "name": "Dualsense Input",
+    "description": null,
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/dualsense-input",
+    "link": null
+  },
+  {
+    "name": "Springboot Auth Template",
+    "description": "a starter Springboot project with JWT authentication.",
+    "techstack": "java, jwt-authentication, springboot",
+    "repoLink": "https://github.com/Bhabishworgrg/springboot-auth-template",
+    "link": null
+  },
+  {
+    "name": "Helpdesk System",
+    "description": "a helpdesk system to manage tickets",
+    "techstack": "odoo, python",
+    "repoLink": "https://github.com/Bhabishworgrg/helpdesk-system",
+    "link": null
+  },
+  {
+    "name": "Production Project",
+    "description": "platformer that uses sketches as sprites",
+    "techstack": "csharp, gdscript, godot, opencv, python",
+    "repoLink": "https://github.com/Bhabishworgrg/production-project",
+    "link": null
+  },
+  {
+    "name": "Crud",
+    "description": null,
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/crud",
+    "link": null
+  },
+  {
+    "name": "Virtual Drumset",
+    "description": "A web app to turn your keyboard into a drum kit",
+    "techstack": "css, github-pages, html, javascript",
+    "repoLink": "https://github.com/Bhabishworgrg/virtual-drumset",
+    "link": "https://bhabishworgrg.github.io/virtual-drumset/"
+  },
+  {
+    "name": "Monsetor",
+    "description": "A multi-monitor management tool for X11 & i3",
+    "techstack": "bash",
+    "repoLink": "https://github.com/Bhabishworgrg/monsetor",
+    "link": null
+  },
+  {
+    "name": "Pattern Matcher",
+    "description": "A cli tool to search for strings or patterns",
+    "techstack": "cli, csharp, dotnet",
+    "repoLink": "https://github.com/Bhabishworgrg/pattern-matcher",
+    "link": null
+  },
+  {
+    "name": "Cleckhuddersfax Market Hub",
+    "description": "an e-commerce site",
+    "techstack": "bootstrap, css, html, javascript, php",
+    "repoLink": "https://github.com/Bhabishworgrg/cleckhuddersfax-market-hub",
+    "link": null
+  },
+  {
+    "name": "Pushpod",
+    "description": "a git hosting platform",
+    "techstack": "asp-net-mvc, csharp, sqlite",
+    "repoLink": "https://github.com/Bhabishworgrg/pushpod",
+    "link": null
+  },
+  {
+    "name": "Blog App",
+    "description": "A blog web application created using Django",
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/blog-app",
+    "link": null
+  },
+  {
+    "name": "Turtle Graphics",
+    "description": "a paint tool to control and draw with a turtle using commands",
+    "techstack": "java, java-swing",
+    "repoLink": "https://github.com/Bhabishworgrg/turtle-graphics",
+    "link": null
+  },
+  {
+    "name": "Azure Ccd Web Service",
+    "description": "PaaS Deployment Demo",
+    "techstack": "azure, flask, paas, python",
+    "repoLink": "https://github.com/Bhabishworgrg/azure-ccd-web-service",
+    "link": null
+  },
+  {
+    "name": "Bhabeasy",
+    "description": "A java maven archetype curated for beginners",
+    "techstack": "java, maven-archetype",
+    "repoLink": "https://github.com/Bhabishworgrg/bhabeasy",
+    "link": null
+  },
+  {
+    "name": "Godot Python Connection",
+    "description": null,
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/godot-python-connection",
+    "link": null
+  },
+  {
+    "name": "Init Opencv",
+    "description": "a C++ OpenCV project initializer",
+    "techstack": "bash",
+    "repoLink": "https://github.com/Bhabishworgrg/init-opencv",
+    "link": null
+  },
+  {
+    "name": "Memory Match",
+    "description": "A card matching game made in Godot with C#",
+    "techstack": "csharp, game-development, godot",
+    "repoLink": "https://github.com/Bhabishworgrg/memory-match",
+    "link": null
+  },
+  {
+    "name": "Race For The Ace",
+    "description": "a card shuffler and dealer",
+    "techstack": "cli, python",
+    "repoLink": "https://github.com/Bhabishworgrg/race-for-the-ace",
+    "link": null
+  },
+  {
+    "name": "Rainfall Stats Analyser",
+    "description": "monthly rainfall statistics provider",
+    "techstack": "cli, python",
+    "repoLink": "https://github.com/Bhabishworgrg/rainfall-stats-analyser",
+    "link": null
+  },
+  {
+    "name": "Checkout Process Simulator",
+    "description": "simulates checkout process in a store",
+    "techstack": "cli, python",
+    "repoLink": "https://github.com/Bhabishworgrg/checkout-process-simulator",
+    "link": null
+  }
+]
