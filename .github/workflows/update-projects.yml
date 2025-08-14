@@ -35,3 +35,4 @@ jobs:
         run: npm run deploy
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
