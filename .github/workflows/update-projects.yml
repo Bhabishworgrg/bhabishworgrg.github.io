@@ -1,4 +1,4 @@
-name: Update repos.json weekly
+name: Update repos.json and deploy weekly
 
 on:
   schedule:
@@ -32,7 +32,6 @@ jobs:
           VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        run: npm run deploy
+        env:
+          GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
