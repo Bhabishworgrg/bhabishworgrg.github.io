@@ -9,7 +9,8 @@
 		"prebuild": "node fetchRepos.js",
 		"build": "vite build",
 		"predeploy": "npm run build",
-		"deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d dist -r https://$GH_TOKEN@github.com/Bhabishworgrg/bhabishworgrg.github.io.git",
+		"manual-deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"dotenv": "^16.5.0",
