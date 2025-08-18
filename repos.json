@@ -1,54 +1,5 @@
 [
   {
-    "name": "Farming Sim Service",
-    "description": null,
-    "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/farming-sim-service",
-    "link": null
-  },
-  {
-    "name": "Blog Platform Api",
-    "description": null,
-    "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/blog-platform-api",
-    "link": null
-  },
-  {
-    "name": "Student Crud",
-    "description": null,
-    "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/student-crud",
-    "link": null
-  },
-  {
-    "name": "Movie Booking System",
-    "description": null,
-    "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/movie-booking-system",
-    "link": null
-  },
-  {
-    "name": "Monsetor",
-    "description": "A multi-monitor management tool for X11 & i3",
-    "techstack": "bash",
-    "repoLink": "https://github.com/Bhabishworgrg/monsetor",
-    "link": null
-  },
-  {
-    "name": "Godot Opencv Connection",
-    "description": null,
-    "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/godot-opencv-connection",
-    "link": null
-  },
-  {
-    "name": "Springboot Auth Template",
-    "description": "a starter Springboot project with JWT authentication.",
-    "techstack": "java, jwt-authentication, springboot",
-    "repoLink": "https://github.com/Bhabishworgrg/springboot-auth-template",
-    "link": null
-  },
-  {
     "name": "BOOSE Interpreter",
     "description": "Interpreter for BOOSE language",
     "techstack": "csharp, dotnet, winforms",
@@ -60,6 +11,13 @@
     "description": null,
     "techstack": "",
     "repoLink": "https://github.com/Bhabishworgrg/dualsense-input",
+    "link": null
+  },
+  {
+    "name": "Springboot Auth Template",
+    "description": "a starter Springboot project with JWT authentication.",
+    "techstack": "java, jwt-authentication, springboot",
+    "repoLink": "https://github.com/Bhabishworgrg/springboot-auth-template",
     "link": null
   },
   {
@@ -91,6 +49,13 @@
     "link": "https://bhabishworgrg.github.io/virtual-drumset/"
   },
   {
+    "name": "Monsetor",
+    "description": "A multi-monitor management tool for X11 & i3",
+    "techstack": "bash",
+    "repoLink": "https://github.com/Bhabishworgrg/monsetor",
+    "link": null
+  },
+  {
     "name": "Pattern Matcher",
     "description": "A cli tool to search for strings or patterns",
     "techstack": "cli, csharp, dotnet",
@@ -107,8 +72,15 @@
   {
     "name": "Pushpod",
     "description": "a git hosting platform",
-    "techstack": "aspnetcore, csharp, sqlite",
+    "techstack": "asp-net-mvc, csharp, sqlite",
     "repoLink": "https://github.com/Bhabishworgrg/pushpod",
+    "link": null
+  },
+  {
+    "name": "Blog App",
+    "description": "A blog web application created using Django",
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/blog-app",
     "link": null
   },
   {
@@ -130,6 +102,13 @@
     "description": "A java maven archetype curated for beginners",
     "techstack": "java, maven-archetype",
     "repoLink": "https://github.com/Bhabishworgrg/bhabeasy",
+    "link": null
+  },
+  {
+    "name": "Godot Python Connection",
+    "description": null,
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/godot-python-connection",
     "link": null
   },
   {
