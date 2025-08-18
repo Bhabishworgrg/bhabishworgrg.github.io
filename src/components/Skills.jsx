@@ -5,19 +5,19 @@ function Skills() {
 		{ skill: 'dotnet', label: '.NET' },
 		{ skill: 'java', label: 'Java' },
 		{ skill: 'python', label: 'Python' },
-		{ skill: 'js', label: 'JavaScript' },
 		{ skill: 'linux', label: 'Linux' },
 		{ skill: 'git', label: 'Git' },
+		{ skill: 'docker', label: 'Docker' },
+		{ skill: 'js', label: 'JavaScript' },
 		{ skill: 'postgresql', label: 'PostgreSQL' },
 		{ skill: 'sqlite', label: 'SQLite' },
 		{ skill: 'react', label: 'React' },
+		{ skill: 'godot', label: 'Godot' },
+		{ skill: 'c', label: 'C' },
 		{ skill: 'odoo', label: 'Odoo' },
 		{ skill: 'bootstrap', label: 'Bootstrap' },
 		{ skill: 'tailwind', label: 'Tailwind CSS' },
-		{ skill: 'oracle-apex', label: 'Oracle APEX' },
-		{ skill: 'c-cpp', label: 'C/C++' },
-		{ skill: 'android-studio', label: 'Android Studio' },
-		{ skill: 'godot', label: 'Godot' },
+		{ skill: 'oracle-apex', label: 'Oracle APEX' }
 	];
 
 	const setLink = (skill) => {
