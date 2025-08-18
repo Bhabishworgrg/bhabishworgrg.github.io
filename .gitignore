@@ -7,9 +7,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# React js
 node_modules
 dist
 dist-ssr
 *.local
 
+# Environment variables
 .env
+
+# Kitty Session files
+session.kitty
