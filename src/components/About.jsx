@@ -6,7 +6,7 @@ function About() {
 			<div className='flex flex-col lg:flex-row items-center justify-center'>
 				<div>
 					<p className='mt-4 lg:mt-0 text-base lg:text-lg'>
-						As an aspiring backend developer and software enthusiast, I am constantly learning about building scalable and efficient web applications. I graduated from <a href='https://www.leedsbeckett.ac.uk/' className='text-highlight hover:saturate-150 transition-transform'>Leeds Beckett University</a> with a BSc (Hons) Computing degree in 2025.
+						As an aspiring backend developer and software enthusiast, I am constantly learning about building scalable and efficient web applications. I graduated from <a href='https://www.leedsbeckett.ac.uk/' className='text-highlight hover:saturate-150 transition-transform'>Leeds Beckett University</a> with a BSc (Hons) Computer Science degree in 2025.
 					</p>
 					<br/>
 					<p className='text-base lg:text-lg'>
