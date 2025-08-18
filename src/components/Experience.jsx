@@ -4,16 +4,27 @@ import { FaBuilding, FaLaptopHouse } from 'react-icons/fa';
 function Experience() {
 	const items = [
 		{
-			position: 'Backend Intern',
-			company: 'Amnil Technologies',
-			date: 'Dec 2024 - Mar 2025',
+			position: 'Software Engineer Intern',
+			company: 'Verisk',
+			date: 'Jun 2025 - Present',
 			description: [
-				'Developed a to-do app in Odoo, using MVC structure and Odoo’s ORM.',
-				'Built a helpdesk system by integrating existing modules with the custom to-do, helpdesk and bridge modules.',
-				'Customized user interfaces with Bootstrap to enhance usability and layout.',
-				'Used PostgreSQL for data persistence and Docker for containerized deployments.',
-				'Created a public ticket submission portal by implementing custom controllers, routing, and form handling.',
-				'Applied security best practices using Odoo’s record rules and user groups to restrict data access.',
+				'Built RESTful APIs using ASP.NET Core and Python FastAPI with layered architecture for maintainability.',
+				'Integrated PostgreSQL via Entity Framework Core (for .NET) and SQLAlchemy ORM (for Python).',
+				'Implemented JWT authentication and role-based access control.',
+				'Designed clear data flow with DTOs (.NET) and Pydantic schemas (Python) and used LINQ (for .NET) and ORM queries for data manipulation.'
+				],
+			mode: 'onsite',
+		},
+		{
+			position: 'Software Engineer Intern',
+			company: 'Amnil Technologies',
+			date: 'Dec 2024 - Jun 2025',
+			description: [
+				'Designed and developed Python-based applications tailored to business requirements with custom Odoo modules.',
+				'Integrated multiple Odoo apps to streamline workflows and improve data consistency.',
+				'Customized user interfaces using Bootstrap to enhance usability and branding.',
+				'Used Odoo ORM to perform database operations in PostgreSQL database.',
+				'Managed deployment of dockerized Odoo instances, ensuring data integrity.'
 			],
 			mode: 'onsite',
 		},
@@ -25,8 +36,7 @@ function Experience() {
 				'Annotated images used for training AI/ML models, following detailed labeling guidelines.',
 				'Ensured consistency and precision across annotations to support high-quality model performance.',
 				'Used internal tools and client-provided platforms to complete annotation tasks efficiently.',
-				'Communicated with team members via Slack to align on project goals and resolve edge cases.',
-				'Consistently achieved or exceeded accuracy and throughput targets set by the project.',
+				'Communicated with team members via Slack to align on project goals and resolve edge cases.'
 			],
 			mode: 'remote',
 		},
@@ -37,8 +47,7 @@ function Experience() {
 			description: [
 				'Annotated videos and images on Dataloop, Hasty, Encord, and client-specific platforms.',
 				'Collaborated with Team Captains via Zoom, Google Meet, and Slack to align with client updates.',
-				'Trained new team members on annotation tools and quality standards to ensure consistent output.',
-				'Maintained high accuracy and throughput in line with project requirements.',
+				'Trained new team members on annotation tools and quality standards to ensure consistent output.'
 			],
 			mode: 'remote',
 		},
@@ -50,8 +59,7 @@ function Experience() {
 				'Marketed bench consultants for Corp-to-Corp (C2C) positions in the US IT industry.',
 				'Collaborated with the offshore US team during night shifts via Slack and Google Meet.',
 				'Utilized Boolean Search techniques to identify and match suitable job requirements.',
-				'Scheduled and coordinated interviews with consultants and vendors using Google Calendar.',
-				'Maintained daily and weekly activity reports using Google Sheets to track progress and performance.',
+				'Maintained daily and weekly activity reports using Google Sheets to track progress and performance.'
 			],
 			mode: 'onsite',
 		},
