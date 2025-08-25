@@ -1,5 +1,19 @@
 [
   {
+    "name": "Memory Match",
+    "description": "A card matching game made in Godot with C#",
+    "techstack": "csharp, game-development, godot",
+    "repoLink": "https://github.com/Bhabishworgrg/memory-match",
+    "link": null
+  },
+  {
+    "name": "Farming Sim Client",
+    "description": null,
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/farming-sim-client",
+    "link": null
+  },
+  {
     "name": "Student Crud",
     "description": null,
     "techstack": "",
@@ -137,34 +151,6 @@
     "description": "a C++ OpenCV project initializer",
     "techstack": "bash",
     "repoLink": "https://github.com/Bhabishworgrg/init-opencv",
-    "link": null
-  },
-  {
-    "name": "Memory Match",
-    "description": "A card matching game made in Godot with C#",
-    "techstack": "csharp, game-development, godot",
-    "repoLink": "https://github.com/Bhabishworgrg/memory-match",
-    "link": null
-  },
-  {
-    "name": "Race For The Ace",
-    "description": "a card shuffler and dealer",
-    "techstack": "cli, python",
-    "repoLink": "https://github.com/Bhabishworgrg/race-for-the-ace",
-    "link": null
-  },
-  {
-    "name": "Rainfall Stats Analyser",
-    "description": "monthly rainfall statistics provider",
-    "techstack": "cli, python",
-    "repoLink": "https://github.com/Bhabishworgrg/rainfall-stats-analyser",
-    "link": null
-  },
-  {
-    "name": "Checkout Process Simulator",
-    "description": "simulates checkout process in a store",
-    "techstack": "cli, python",
-    "repoLink": "https://github.com/Bhabishworgrg/checkout-process-simulator",
     "link": null
   }
 ]
