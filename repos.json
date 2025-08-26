@@ -1,8 +1,15 @@
 [
   {
+    "name": "The Uncertainty Principle",
+    "description": "a game made in Godot with C#",
+    "techstack": "csharp, godot",
+    "repoLink": "https://github.com/Bhabishworgrg/the-uncertainty-principle",
+    "link": null
+  },
+  {
     "name": "Memory Match",
-    "description": "A card matching game made in Godot with C#",
-    "techstack": "csharp, game-development, godot",
+    "description": "a card matching memory game made in Godot with C#",
+    "techstack": "csharp, godot",
     "repoLink": "https://github.com/Bhabishworgrg/memory-match",
     "link": null
   },
@@ -15,8 +22,8 @@
   },
   {
     "name": "Student Crud",
-    "description": null,
-    "techstack": "",
+    "description": "a web CRUD application for managing student records with dynamic forms",
+    "techstack": "glassfish, java, jdk8, jsf, mysql, primefaces",
     "repoLink": "https://github.com/Bhabishworgrg/student-crud",
     "link": null
   },
@@ -29,57 +36,57 @@
   },
   {
     "name": "Blog Platform Api",
-    "description": null,
-    "techstack": "",
+    "description": "a RESTful Blog Platform API with comments, tags and optional filtering, searching, sorting.",
+    "techstack": "express, jwt, mongodb, nodejs",
     "repoLink": "https://github.com/Bhabishworgrg/blog-platform-api",
     "link": null
   },
   {
     "name": "Movie Booking System",
-    "description": null,
-    "techstack": "",
+    "description": "a movie ticket booking system for browsing, booking and managing showtimes.",
+    "techstack": "fastapi, jwt, postgresql, python, vue",
     "repoLink": "https://github.com/Bhabishworgrg/movie-booking-system",
     "link": null
   },
   {
     "name": "Monsetor",
-    "description": "A multi-monitor management tool for X11 & i3",
+    "description": "a multi-monitor management tool for X11 & i3",
     "techstack": "bash",
     "repoLink": "https://github.com/Bhabishworgrg/monsetor",
     "link": null
   },
   {
     "name": "Godot Opencv Connection",
-    "description": null,
-    "techstack": "",
+    "description": "a showcase of real-time hand gesture-controlling in Godot with OpenCV and MediaPipe integration",
+    "techstack": "gdscript, godot, mediapipe, opencv, python",
     "repoLink": "https://github.com/Bhabishworgrg/godot-opencv-connection",
     "link": null
   },
   {
     "name": "Springboot Auth Template",
     "description": "a starter Springboot project with JWT authentication.",
-    "techstack": "java, jwt-authentication, springboot",
+    "techstack": "java, jwt, springboot",
     "repoLink": "https://github.com/Bhabishworgrg/springboot-auth-template",
     "link": null
   },
   {
     "name": "BOOSE Interpreter",
-    "description": "Interpreter for BOOSE language",
+    "description": "an interpreter for custom programming language, BOOSE",
     "techstack": "csharp, dotnet, winforms",
     "repoLink": "https://github.com/Bhabishworgrg/BOOSE-interpreter",
     "link": "https://bhabishworgrg.github.io/BOOSE-interpreter/"
   },
   {
     "name": "Dualsense Input",
-    "description": null,
-    "techstack": "",
+    "description": "mouse control on Linux/X11 with PS5 dualsense controller",
+    "techstack": "c",
     "repoLink": "https://github.com/Bhabishworgrg/dualsense-input",
     "link": null
   },
   {
     "name": "Helpdesk System",
     "description": "a helpdesk system to manage tickets",
-    "techstack": "odoo, python",
+    "techstack": "bootstrap, odoo, postgresql, python",
     "repoLink": "https://github.com/Bhabishworgrg/helpdesk-system",
     "link": null
   },
@@ -99,36 +106,36 @@
   },
   {
     "name": "Virtual Drumset",
-    "description": "A web app to turn your keyboard into a drum kit",
-    "techstack": "css, github-pages, html, javascript",
+    "description": "a web app to turn your keyboard into a drum kit",
+    "techstack": "github-pages, javascript",
     "repoLink": "https://github.com/Bhabishworgrg/virtual-drumset",
     "link": "https://bhabishworgrg.github.io/virtual-drumset/"
   },
   {
     "name": "Pattern Matcher",
-    "description": "A cli tool to search for strings or patterns",
+    "description": "a cli tool to search for strings or patterns",
     "techstack": "cli, csharp, dotnet",
     "repoLink": "https://github.com/Bhabishworgrg/pattern-matcher",
     "link": null
   },
   {
     "name": "Cleckhuddersfax Market Hub",
-    "description": "an e-commerce site",
-    "techstack": "bootstrap, css, html, javascript, php",
+    "description": "an e-commerce site (academic group project)",
+    "techstack": "bootstrap, javascript, oracle-apex, php",
     "repoLink": "https://github.com/Bhabishworgrg/cleckhuddersfax-market-hub",
     "link": null
   },
   {
     "name": "Pushpod",
     "description": "a git hosting platform",
-    "techstack": "aspnetcore, csharp, sqlite",
+    "techstack": "aspnetcore, csharp, dotnet, sqlite",
     "repoLink": "https://github.com/Bhabishworgrg/pushpod",
     "link": null
   },
   {
     "name": "Turtle Graphics",
     "description": "a paint tool to control and draw with a turtle using commands",
-    "techstack": "java, java-swing",
+    "techstack": "java, java-awt, java-swing",
     "repoLink": "https://github.com/Bhabishworgrg/turtle-graphics",
     "link": null
   },
@@ -141,7 +148,7 @@
   },
   {
     "name": "Bhabeasy",
-    "description": "A java maven archetype curated for beginners",
+    "description": "a java maven archetype curated for beginners",
     "techstack": "java, maven-archetype",
     "repoLink": "https://github.com/Bhabishworgrg/bhabeasy",
     "link": null
