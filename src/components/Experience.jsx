@@ -6,7 +6,7 @@ function Experience() {
 		{
 			position: 'Software Engineer Intern',
 			company: 'Verisk',
-			date: 'Jun 2025 - Present',
+			date: 'Jun 2025 - Sep 2025',
 			description: [
 				'Built RESTful APIs using ASP.NET Core and Python FastAPI with layered architecture for maintainability.',
 				'Integrated PostgreSQL via Entity Framework Core (for .NET) and SQLAlchemy ORM (for Python).',
