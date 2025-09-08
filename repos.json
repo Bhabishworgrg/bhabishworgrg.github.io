@@ -1,5 +1,12 @@
 [
   {
+    "name": "Monsetor",
+    "description": "a multi-monitor management tool for X11 & i3",
+    "techstack": "bash",
+    "repoLink": "https://github.com/Bhabishworgrg/monsetor",
+    "link": null
+  },
+  {
     "name": "Farming Sim Service",
     "description": null,
     "techstack": "",
@@ -46,13 +53,6 @@
     "description": "a movie ticket booking system for browsing, booking and managing showtimes.",
     "techstack": "fastapi, jwt, postgresql, python, vue",
     "repoLink": "https://github.com/Bhabishworgrg/movie-booking-system",
-    "link": null
-  },
-  {
-    "name": "Monsetor",
-    "description": "a multi-monitor management tool for X11 & i3",
-    "techstack": "bash",
-    "repoLink": "https://github.com/Bhabishworgrg/monsetor",
     "link": null
   },
   {
