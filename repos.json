@@ -1,5 +1,12 @@
 [
   {
+    "name": "Doot",
+    "description": null,
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/doot",
+    "link": null
+  },
+  {
     "name": "Monsetor",
     "description": "a multi-monitor management tool for X11 & i3",
     "techstack": "bash",
@@ -103,13 +110,6 @@
     "techstack": "",
     "repoLink": "https://github.com/Bhabishworgrg/crud",
     "link": null
-  },
-  {
-    "name": "Virtual Drumset",
-    "description": "a web app to turn your keyboard into a drum kit",
-    "techstack": "github-pages, javascript",
-    "repoLink": "https://github.com/Bhabishworgrg/virtual-drumset",
-    "link": "https://bhabishworgrg.github.io/virtual-drumset/"
   },
   {
     "name": "Pattern Matcher",
