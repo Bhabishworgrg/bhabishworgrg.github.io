@@ -1,16 +1,16 @@
 [
   {
-    "name": "Doot",
-    "description": null,
-    "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/doot",
-    "link": null
-  },
-  {
     "name": "Monsetor",
     "description": "a multi-monitor management tool for X11 & i3",
     "techstack": "bash",
     "repoLink": "https://github.com/Bhabishworgrg/monsetor",
+    "link": null
+  },
+  {
+    "name": "Doot",
+    "description": null,
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/doot",
     "link": null
   },
   {
