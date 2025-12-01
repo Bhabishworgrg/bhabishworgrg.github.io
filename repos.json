@@ -1,12 +1,5 @@
 [
   {
-    "name": "Fliboria",
-    "description": null,
-    "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/fliboria",
-    "link": null
-  },
-  {
     "name": "Monsetor",
     "description": "a multi-monitor management tool for X11 & i3",
     "techstack": "bash",
@@ -137,6 +130,13 @@
     "description": "a git hosting platform",
     "techstack": "aspnetcore, csharp, dotnet, sqlite",
     "repoLink": "https://github.com/Bhabishworgrg/pushpod",
+    "link": null
+  },
+  {
+    "name": "Turtle Graphics",
+    "description": "a paint tool to control and draw with a turtle using commands",
+    "techstack": "java, java-awt, java-swing",
+    "repoLink": "https://github.com/Bhabishworgrg/turtle-graphics",
     "link": null
   },
   {
