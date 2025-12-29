@@ -1,5 +1,19 @@
 [
   {
+    "name": "Copilot Test",
+    "description": null,
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/copilot-test",
+    "link": null
+  },
+  {
+    "name": "Blah",
+    "description": "sfafasfas",
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/blah",
+    "link": null
+  },
+  {
     "name": "Nvim Py Config",
     "description": "minimal neovim configuration for python",
     "techstack": "",
@@ -28,13 +42,6 @@
     "link": null
   },
   {
-    "name": "The Uncertainty Principle",
-    "description": "a game made in Godot with C#",
-    "techstack": "csharp, godot",
-    "repoLink": "https://github.com/Bhabishworgrg/the-uncertainty-principle",
-    "link": null
-  },
-  {
     "name": "Memory Match",
     "description": "a card matching memory game made in Godot with C#",
     "techstack": "csharp, godot",
@@ -46,13 +53,6 @@
     "description": null,
     "techstack": "",
     "repoLink": "https://github.com/Bhabishworgrg/farming-sim-client",
-    "link": null
-  },
-  {
-    "name": "Student Crud",
-    "description": "a web CRUD application for managing student records with dynamic forms",
-    "techstack": "glassfish, java, jdk8, jsf, mysql, primefaces",
-    "repoLink": "https://github.com/Bhabishworgrg/student-crud",
     "link": null
   },
   {
