@@ -1,9 +1,9 @@
 [
   {
-    "name": "Resume Screening System",
-    "description": null,
+    "name": "Nvim Py Config",
+    "description": "minimal neovim configuration for python",
     "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/resume-screening-system",
+    "repoLink": "https://github.com/Bhabishworgrg/nvim-py-config",
     "link": null
   },
   {
@@ -11,13 +11,6 @@
     "description": "sfafasfas",
     "techstack": "",
     "repoLink": "https://github.com/Bhabishworgrg/blah",
-    "link": null
-  },
-  {
-    "name": "Nvim Py Config",
-    "description": "minimal neovim configuration for python",
-    "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/nvim-py-config",
     "link": null
   },
   {
@@ -53,6 +46,13 @@
     "description": null,
     "techstack": "",
     "repoLink": "https://github.com/Bhabishworgrg/farming-sim-client",
+    "link": null
+  },
+  {
+    "name": "Student Crud",
+    "description": "a web CRUD application for managing student records with dynamic forms",
+    "techstack": "glassfish, java, jdk8, jsf, mysql, primefaces",
+    "repoLink": "https://github.com/Bhabishworgrg/student-crud",
     "link": null
   },
   {
