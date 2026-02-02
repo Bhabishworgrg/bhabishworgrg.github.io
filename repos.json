@@ -1,5 +1,12 @@
 [
   {
+    "name": "Knotebook",
+    "description": " Make notes with markdown",
+    "techstack": "markdown, python",
+    "repoLink": "https://github.com/Bhabishworgrg/knotebook",
+    "link": null
+  },
+  {
     "name": "Nvim Py Config",
     "description": "minimal neovim configuration for python",
     "techstack": "",
@@ -46,13 +53,6 @@
     "description": null,
     "techstack": "",
     "repoLink": "https://github.com/Bhabishworgrg/farming-sim-client",
-    "link": null
-  },
-  {
-    "name": "Student Crud",
-    "description": "a web CRUD application for managing student records with dynamic forms",
-    "techstack": "glassfish, java, jdk8, jsf, mysql, primefaces",
-    "repoLink": "https://github.com/Bhabishworgrg/student-crud",
     "link": null
   },
   {
