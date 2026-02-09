@@ -1,9 +1,16 @@
 [
   {
     "name": "Knotebook",
-    "description": " Make notes with markdown",
-    "techstack": "markdown, python",
+    "description": null,
+    "techstack": "",
     "repoLink": "https://github.com/Bhabishworgrg/knotebook",
+    "link": "https://knotebook.bhabishwor.com.np"
+  },
+  {
+    "name": "Doot",
+    "description": null,
+    "techstack": "",
+    "repoLink": "https://github.com/Bhabishworgrg/doot",
     "link": null
   },
   {
@@ -25,13 +32,6 @@
     "description": "a multi-monitor management tool for X11 & i3",
     "techstack": "bash",
     "repoLink": "https://github.com/Bhabishworgrg/monsetor",
-    "link": null
-  },
-  {
-    "name": "Doot",
-    "description": null,
-    "techstack": "",
-    "repoLink": "https://github.com/Bhabishworgrg/doot",
     "link": null
   },
   {
